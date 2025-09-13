@@ -17,9 +17,11 @@ CREATE DATABASE neo_horizon_test
 
 create table if not exists dim_periodo (
  periodo_id bigint generated always as identity,
- periodo_nome varchar(60) not null,
- primary key (periodo_id),
- unique (periodo_nome)
+ periodo_dia int,
+ periodo_semana int,
+ periodo_mes int,
+ periodo_ano int,
+ primary key (periodo_id)
 );
 
 create table if not exists dim_projeto (
@@ -69,26 +71,14 @@ create table if not exists fato_issue (
  foreign key (tipo_id) references dim_tipo (tipo_id) on delete restrict on update cascade
 );
 
-create table if not exists fato_custo (
- custo_id bigint generated always as identity,
+create table if not exists fato_custo_hora (
+ custo_hora_id bigint generated always as identity,
  projeto_id bigint not null,
  periodo_id bigint not null,
  dev_id bigint not null,
- custo bigint not null,
- primary key (custo_id, projeto_id, periodo_id, dev_id),
- foreign key (projeto_id) references dim_projeto (projeto_id) on delete restrict on update cascade,
- foreign key (periodo_id) references dim_periodo (periodo_id) on delete restrict on update cascade,
- foreign key (dev_id) references dim_dev (dev_id) on delete restrict on update cascade
-);
-
-
-create table if not exists fato_horas (
- horas_id bigint generated always as identity,
- projeto_id bigint not null,
- periodo_id bigint not null,
- dev_id bigint not null,
- horas_quantidade bigint not null,
- primary key (horas_id, projeto_id, periodo_id, dev_id),
+ custo int,
+ horas_quantidade int,
+ primary key (custo_hora_id, projeto_id, periodo_id, dev_id),
  foreign key (projeto_id) references dim_projeto (projeto_id) on delete restrict on update cascade,
  foreign key (periodo_id) references dim_periodo (periodo_id) on delete restrict on update cascade,
  foreign key (dev_id) references dim_dev (dev_id) on delete restrict on update cascade

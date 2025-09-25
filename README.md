@@ -3,12 +3,13 @@
 
 <p align="center">
   <a href="#anger-problema">Problema</a> •
-  <a href="#anger-objetivo-do-projeto">Objetivo do Projeto</a> •
-  <a href="#anger-integrantes-da-equipe">Integrantes da Equipe</a> •
-  <a href="#requisitos">Requisitos Funcionais e Não Funcionais</a> •
+  <a href="#dart-objetivo-do-projeto">Objetivo do Projeto</a> •
+  <a href="#requisitos-funcionais-e-nao-funcionais">Requisitos Funcionais e Não Funcionais</a> •
+  <a href="#date-backlog-do-produto">Product Backlog</a> •
+  <a href="#date-sprint-backlog">Sprint Backlog</a> •
   <a href="#cronograma">Cronograma</a> •
-  <a href="#product-backlog">Product Backlog</a> •
   <a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a>
+  <a href="#mortar_board-integrantes-da-equipe">Integrantes da Equipe</a> •
 </p>
 
 ## :anger: Problema <a id="problema"></a>
@@ -48,7 +49,6 @@ O objetivo da solução é transformar dados brutos em informações estratégic
 | RNF01 | *Documentação Técnica* | A API desenvolvida para se conectar com o Jira deverá ser documentada de forma clara, utilizando ferramentas padrão da indústria, como o Swagger. A documentação deve incluir os endpoints, métodos, parâmetros e exemplos de requisições. |
 | RNF02 | *Usabilidade* | A interface do usuário deve ser intuitiva e limpa, garantindo uma boa experiência de uso para todos os perfis (Membro de Equipe, Líder e Gerente). |
 | RNF03 | *Modelagem do Banco de Dados* | O sistema deverá contar com uma modelagem de banco de dados relacional otimizada, garantindo integridade referencial, desempenho nas consultas e escalabilidade. A modelagem deverá considerar normalização, chaves estrangeiras, índices e histórico de movimentações dos cards para o cálculo de indicadores como tempo de execução e retrabalho. |
-| RNF04 | *Automação e DevOps* | O sistema deve utilizar ferramentas de DevOps para garantir a estabilidade e a qualidade do projeto. Isso inclui integração contínua (CI) com testes automatizados, controle de versão do banco de dados e documentação atualizada. Deve haver rastreamento de requisitos e validação por QA. |
 
 </details>
 
@@ -58,7 +58,6 @@ O objetivo da solução é transformar dados brutos em informações estratégic
 
 <summary>Clique aqui</summary>
 
-## Backlog novo
 | ID | Rank | Prioridade | User Story | Sprint | Requisitos Relacionados |
 |:---|:---|:---|:---|:---|:---|
 | US01 | 1 | Alta | Como Gerente de Projeto, desejo visualizar todas as métricas disponibilizadas em cards, para acompanhar de forma prática os dados e indicadores de desempenho do projeto. | 1 | RF04 |
@@ -69,15 +68,22 @@ O objetivo da solução é transformar dados brutos em informações estratégic
 | US06 | 6 | Média | Como Gerente de Projeto, desejo filtrar os dados exibidos por projeto. | 2 | RF01 |
 | US07 | 7 | Média | Como Líder de Equipe, desejo visualizar a carga de trabalho do meu time (número de cards e horas por membro), para que eu possa acompanhar o desempenho da equipe. | 2 | RF02 |
 | US08 | 8 | Baixa | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | 3 | RF06 |
-| US09 | 9 | Baixa | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | 3 | RF05 |
+| US09 | 9 | Baixa | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | 3 | RF05, RF07 |
 | US10 | 10 | Baixa | Como Gerente de Projeto, quero acompanhar a distribuição dos cards por status (em andamento, concluídos, pendentes etc.), a fim de monitorar o progresso e identificar possíveis gargalos no fluxo de trabalho. | 3 | RF06 |
 
 </details>
 
-## :date: Backlog das Sprints
-<details>
+## :date: Sprint Backlog
 
+<details>
 <summary>Sprint 1</summary>
+
+Proposta de entrega:
+Tela inicial (sem validação de acesso do usuário), contendo os seguintes gráficos consumindo dados do cliente:
+- Total de Issues
+- Análise de custo (geral e por projeto)
+- Quantidade de atividades realizadas dentro do período (dia, mês, ano)
+- Quantidade de horas utilizadas por desenvolvedor, detalhadas por atividade e por dias
 
 | ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
 |:---|:---|:---|:---|:---|

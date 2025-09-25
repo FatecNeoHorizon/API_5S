@@ -65,12 +65,12 @@ O objetivo da solução é transformar dados brutos em informações estratégic
 | US02 | 2 | Alta | Como Gerente de Projeto, desejo visualizar a quantidade de cards para que eu tenha uma visão estratégica do projeto. | 1 | RF03 |
 | US03 | 3 | Alta | Como Gerente de Projeto, desejo analisar os custos consolidados dos projetos, para controlar melhor os recursos e alinhar os investimentos com os objetivos estratégicos da empresa. | 1 | RF03 |
 | US04 | 4 | Alta | Como Gerente de Projeto, preciso ter visibilidade sobre o tempo gasto de ciclo das tarefas, para avaliar a eficiência das entregas e apoiar a tomada de decisões de melhoria no processo. | 1 | RF03 |
-| US05 | 5 | Alta |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | 2 | RF02 |
-| US06 | 6 | Alta | Como Gerente de Projeto, desejo filtrar os dados exibidos por projeto. | 2 | RF01 |
-| US07 | 7 | Alta | Como Líder de Equipe, desejo visualizar a carga de trabalho do meu time (número de cards e horas por membro), para que eu possa acompanhar o desempenho da equipe. | 2 | RF02 |
-| US08 | 8 | Alta | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | 3 | RF06 |
-| US09 | 9 | Alta | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | 3 | RF05 |
-| US10 | 10 | Alta | Como Gerente de Projeto, quero acompanhar a distribuição dos cards por status (em andamento, concluídos, pendentes etc.), a fim de monitorar o progresso e identificar possíveis gargalos no fluxo de trabalho. | 3 | RF06 |
+| US05 | 5 | Média |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | 2 | RF02 |
+| US06 | 6 | Média | Como Gerente de Projeto, desejo filtrar os dados exibidos por projeto. | 2 | RF01 |
+| US07 | 7 | Média | Como Líder de Equipe, desejo visualizar a carga de trabalho do meu time (número de cards e horas por membro), para que eu possa acompanhar o desempenho da equipe. | 2 | RF02 |
+| US08 | 8 | Baixa | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | 3 | RF06 |
+| US09 | 9 | Baixa | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | 3 | RF05 |
+| US10 | 10 | Baixa | Como Gerente de Projeto, quero acompanhar a distribuição dos cards por status (em andamento, concluídos, pendentes etc.), a fim de monitorar o progresso e identificar possíveis gargalos no fluxo de trabalho. | 3 | RF06 |
 
 </details>
 
@@ -79,33 +79,33 @@ O objetivo da solução é transformar dados brutos em informações estratégic
 
 <summary>Sprint 1</summary>
 
-| ID | Rank | Prioridade | User Story | Sprint | Requisitos Relacionados |
-|:---|:---|:---|:---|:---|:---|
-| US01 | 1 | Alta | Como Gerente de Projeto, desejo visualizar todas as métricas disponibilizadas em cards, para acompanhar de forma prática os dados e indicadores de desempenho do projeto. | 1 | RF04 |
-| US02 | 2 | Alta | Como Gerente de Projeto, desejo visualizar a quantidade de cards para que eu tenha uma visão estratégica do projeto. | 1 | RF03 |
-| US03 | 3 | Alta | Como Gerente de Projeto, desejo analisar os custos consolidados dos projetos, para controlar melhor os recursos e alinhar os investimentos com os objetivos estratégicos da empresa. | 1 | RF03 |
-| US04 | 4 | Alta | Como Gerente de Projeto, preciso ter visibilidade sobre o tempo gasto de ciclo das tarefas, para avaliar a eficiência das entregas e apoiar a tomada de decisões de melhoria no processo. | 1 | RF03 |
+| ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
+|:---|:---|:---|:---|:---|
+| US01 | 1 | Alta | Como Gerente de Projeto, desejo visualizar todas as métricas disponibilizadas em cards, para acompanhar de forma prática os dados e indicadores de desempenho do projeto. | RF04 |
+| US02 | 2 | Média | Como Gerente de Projeto, desejo visualizar a quantidade de cards para que eu tenha uma visão estratégica do projeto. | RF03 |
+| US03 | 3 | Média | Como Gerente de Projeto, desejo analisar os custos consolidados dos projetos, para controlar melhor os recursos e alinhar os investimentos com os objetivos estratégicos da empresa. | RF03 |
+| US04 | 4 | Média | Como Gerente de Projeto, preciso ter visibilidade sobre o tempo gasto de ciclo das tarefas, para avaliar a eficiência das entregas e apoiar a tomada de decisões de melhoria no processo. | RF03 |
 
 </details>
 
 <details>
 <summary>Sprint 2</summary>
 
-<!-- | ID | Rank | Prioridade | User Story | Sprint | Requisitos Relacionados |
-|:---|:---|:---|:---|:---|:---|
-| US05 | 5 | Alta |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | 2 | RF02 |
-| US06 | 6 | Alta | Como Gerente de Projeto, desejo filtrar os dados exibidos por projeto. | 2 | RF01 |
-| US07 | 7 | Alta | Como Líder de Equipe, desejo visualizar a carga de trabalho do meu time (número de cards e horas por membro), para que eu possa acompanhar o desempenho da equipe. | 2 | RF02 | -->
+<!-- | ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
+|:---|:---|:---|:---|:---|
+| US05 | 5 | Alta |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | RF02 |
+| US06 | 6 | Alta | Como Gerente de Projeto, desejo filtrar os dados exibidos por projeto. | RF01 |
+| US07 | 7 | Alta | Como Líder de Equipe, desejo visualizar a carga de trabalho do meu time (número de cards e horas por membro), para que eu possa acompanhar o desempenho da equipe. | RF02 | -->
 </details>
 
 <details>
 <summary>Sprint 3</summary>
 
-<!-- | ID | Rank | Prioridade | User Story | Sprint | Requisitos Relacionados |
-|:---|:---|:---|:---|:---|:---|
-| US08 | 8 | Alta | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | 3 | RF06 |
-| US09 | 9 | Alta | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | 3 | RF05 |
-| US10 | 10 | Alta | Como Gerente de Projeto, quero acompanhar a distribuição dos cards por status (em andamento, concluídos, pendentes etc.), a fim de monitorar o progresso e identificar possíveis gargalos no fluxo de trabalho. | 3 | RF06 | -->
+<!-- | ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
+|:---|:---|:---|:---|:---|
+| US08 | 8 | Alta | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | RF06 |
+| US09 | 9 | Alta | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | RF05 |
+| US10 | 10 | Alta | Como Gerente de Projeto, quero acompanhar a distribuição dos cards por status (em andamento, concluídos, pendentes etc.), a fim de monitorar o progresso e identificar possíveis gargalos no fluxo de trabalho. | RF06 | -->
 </details>
 
 <br>

@@ -1,0 +1,96 @@
+INSERT INTO dim_atividade (atividade_nome, atividade_descricao, projeto_id, ativo) VALUES
+('Desenvolvimento Frontend', 'Desenvolvimento de interfaces de usuário e componentes React', 1, true),
+('Desenvolvimento Backend', 'Desenvolvimento de APIs REST e serviços Spring Boot', 1, true),
+('Testes Unitários', 'Criação e execução de testes unitários e de integração', 1, true),
+('Code Review', 'Revisão de código de outros desenvolvedores', 1, true),
+('Documentação', 'Criação e atualização de documentação técnica', 1, true),
+('Reuniões', 'Participação em reuniões de equipe e planejamento', 1, true),
+('Bug Fix', 'Correção de bugs reportados pelos usuários', 1, true),
+('Refatoração', 'Melhoria e otimização de código existente', 1, true),
+('Deploy', 'Processo de deploy e configuração de ambientes', 1, true),
+('Análise de Requisitos', 'Análise e validação de requisitos funcionais', 1, true);
+
+-- Setembro 2025 - Desenvolvedor 1
+INSERT INTO fato_apontamento_horas (dev_id, atividade_id, projeto_id, data_apontamento, horas_trabalhadas, descricao_trabalho, data_criacao) VALUES
+(1, 1, 1, '2025-09-23', 6.0, 'Implementação da tela de login e cadastro', NOW()),
+(1, 2, 1, '2025-09-23', 2.0, 'Criação de endpoints de autenticação', NOW()),
+(1, 1, 1, '2025-09-24', 7.5, 'Desenvolvimento do dashboard principal', NOW()),
+(1, 4, 1, '2025-09-24', 0.5, 'Code review do PR #123', NOW()),
+(1, 3, 1, '2025-09-25', 4.0, 'Criação de testes para módulo de auth', NOW()),
+(1, 7, 1, '2025-09-25', 3.0, 'Correção de bugs no formulário de cadastro', NOW()),
+(1, 6, 1, '2025-09-25', 1.0, 'Daily meeting e planning', NOW()),
+(1, 2, 1, '2025-09-26', 5.0, 'Desenvolvimento da API de relatórios', NOW()),
+(1, 5, 1, '2025-09-26', 2.0, 'Documentação das APIs criadas', NOW()),
+(1, 8, 1, '2025-09-26', 1.0, 'Refatoração do service de usuários', NOW()),
+
+-- Desenvolvedor 2
+(2, 2, 1, '2025-09-23', 8.0, 'Criação da estrutura do banco de dados', NOW()),
+(2, 10, 1, '2025-09-24', 2.0, 'Análise dos requisitos do módulo financeiro', NOW()),
+(2, 2, 1, '2025-09-24', 6.0, 'Implementação das entidades JPA', NOW()),
+(2, 3, 1, '2025-09-25', 4.0, 'Testes de integração do banco de dados', NOW()),
+(2, 6, 1, '2025-09-25', 1.0, 'Reunião de alinhamento técnico', NOW()),
+(2, 7, 1, '2025-09-25', 3.0, 'Correção de performance nas queries', NOW()),
+(2, 2, 1, '2025-09-26', 4.0, 'Desenvolvimento de endpoints CRUD', NOW()),
+(2, 4, 1, '2025-09-26', 2.0, 'Review de código do frontend', NOW()),
+(2, 9, 1, '2025-09-26', 2.0, 'Deploy da versão 1.2 em homologação', NOW()),
+
+-- Desenvolvedor 3
+(3, 1, 1, '2025-09-23', 7.0, 'Criação dos componentes React', NOW()),
+(3, 6, 1, '2025-09-23', 1.0, 'Sprint planning meeting', NOW()),
+(3, 1, 1, '2025-09-24', 6.0, 'Integração com APIs backend', NOW()),
+(3, 3, 1, '2025-09-24', 2.0, 'Testes unitários dos componentes', NOW()),
+(3, 7, 1, '2025-09-25', 3.0, 'Correção de bugs de responsividade', NOW()),
+(3, 1, 1, '2025-09-25', 4.0, 'Implementação de validações de formulário', NOW()),
+(3, 5, 1, '2025-09-25', 1.0, 'Documentação dos componentes criados', NOW()),
+(3, 8, 1, '2025-09-26', 2.0, 'Refatoração do código de estilização', NOW()),
+(3, 1, 1, '2025-09-26', 6.0, 'Desenvolvimento de telas de relatório', NOW()),
+
+-- Dados da semana anterior (16-20 Setembro)
+(1, 2, 1, '2025-09-16', 8.0, 'Setup inicial do projeto Spring Boot', NOW()),
+(1, 10, 1, '2025-09-17', 3.0, 'Levantamento de requisitos técnicos', NOW()),
+(1, 2, 1, '2025-09-17', 5.0, 'Configuração do banco de dados', NOW()),
+(1, 5, 1, '2025-09-18', 2.0, 'Criação do README do projeto', NOW()),
+(1, 2, 1, '2025-09-18', 6.0, 'Implementação da arquitetura base', NOW()),
+(1, 6, 1, '2025-09-19', 2.0, 'Reunião com stakeholders', NOW()),
+(1, 1, 1, '2025-09-19', 6.0, 'Prototipação das telas principais', NOW()),
+(1, 9, 1, '2025-09-20', 1.0, 'Deploy do ambiente de desenvolvimento', NOW()),
+(1, 3, 1, '2025-09-20', 7.0, 'Configuração do pipeline de testes', NOW()),
+
+(2, 2, 1, '2025-09-16', 7.0, 'Modelagem do banco de dados', NOW()),
+(2, 5, 1, '2025-09-16', 1.0, 'Documentação do modelo de dados', NOW()),
+(2, 2, 1, '2025-09-17', 8.0, 'Criação dos scripts DDL', NOW()),
+(2, 3, 1, '2025-09-18', 4.0, 'Testes de carga no banco', NOW()),
+(2, 2, 1, '2025-09-18', 4.0, 'Desenvolvimento dos repositories', NOW()),
+(2, 4, 1, '2025-09-19', 3.0, 'Code review da estrutura inicial', NOW()),
+(2, 2, 1, '2025-09-19', 5.0, 'Implementação dos services básicos', NOW()),
+(2, 6, 1, '2025-09-20', 1.5, 'Demo para o cliente', NOW()),
+(2, 7, 1, '2025-09-20', 6.5, 'Correções após feedback do cliente', NOW()),
+
+(3, 1, 1, '2025-09-16', 6.0, 'Setup do ambiente React', NOW()),
+(3, 10, 1, '2025-09-16', 2.0, 'Análise do design system', NOW()),
+(3, 1, 1, '2025-09-17', 8.0, 'Criação da estrutura de componentes', NOW()),
+(3, 1, 1, '2025-09-18', 7.0, 'Implementação do layout base', NOW()),
+(3, 5, 1, '2025-09-18', 1.0, 'Documentação dos padrões de código', NOW()),
+(3, 3, 1, '2025-09-19', 4.0, 'Setup dos testes automatizados', NOW()),
+(3, 1, 1, '2025-09-19', 4.0, 'Desenvolvimento dos primeiros componentes', NOW()),
+(3, 6, 1, '2025-09-20', 2.0, 'Apresentação do progresso', NOW()),
+(3, 7, 1, '2025-09-20', 6.0, 'Ajustes na responsividade', NOW()),
+
+-- Dados mais recentes (27-30 Setembro)
+(1, 1, 1, '2025-09-27', 5.0, 'Implementação de filtros avançados', NOW()),
+(1, 3, 1, '2025-09-27', 3.0, 'Testes de integração das APIs', NOW()),
+(1, 2, 1, '2025-09-30', 4.0, 'Otimização de queries complexas', NOW()),
+(1, 4, 1, '2025-09-30', 2.0, 'Review do código de métricas', NOW()),
+(1, 6, 1, '2025-09-30', 2.0, 'Retrospectiva da sprint', NOW()),
+
+(2, 2, 1, '2025-09-27', 6.0, 'Desenvolvimento do módulo de relatórios', NOW()),
+(2, 5, 1, '2025-09-27', 2.0, 'Atualização da documentação da API', NOW()),
+(2, 8, 1, '2025-09-30', 3.0, 'Refatoração do código de métricas', NOW()),
+(2, 9, 1, '2025-09-30', 2.0, 'Deploy em produção', NOW()),
+(2, 7, 1, '2025-09-30', 3.0, 'Monitoramento pós-deploy', NOW()),
+
+(3, 1, 1, '2025-09-27', 7.0, 'Finalização das telas de métricas', NOW()),
+(3, 3, 1, '2025-09-27', 1.0, 'Testes E2E das novas funcionalidades', NOW()),
+(3, 1, 1, '2025-09-30', 4.0, 'Implementação de loading states', NOW()),
+(3, 7, 1, '2025-09-30', 2.0, 'Correção de bugs reportados', NOW()),
+(3, 5, 1, '2025-09-30', 2.0, 'Atualização do guia de usuário', NOW());

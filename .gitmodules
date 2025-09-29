@@ -1,0 +1,12 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/FatecNeoHorizon/API_5SEM_BACKEND
+	branch = main
+[submodule "etl"]
+	path = etl
+	url = https://github.com/FatecNeoHorizon/API_5SEM_ETL
+	branch = main
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/FatecNeoHorizon/API_5SEM_FRONTEND
+	branch = main

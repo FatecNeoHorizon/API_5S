@@ -121,7 +121,7 @@ Tela inicial (sem validação de acesso do usuário), contendo os seguintes grá
 | Sprint  | Nome | Data inicio  | Data Fim | Status |
 | --- | -------------------------- | --------| ----- | --- |
 | --  | KickOff                    | 25/08   | 29/08 |  X  |
-|  1  | Sprint 1                   | 08/09   | 28/09 |     |
+|  1  | Sprint 1                   | 08/09   | 28/09 |  X  |
 |  2  | Sprint review / Planning   | 29/09   | 03/10 |     |
 |  3  | Sprint 2                   | 06/10   | 26/10 |     |
 |  4  | Sprint review / Planning   | 27/10   | 31/10 |     |
@@ -139,7 +139,7 @@ Tela inicial (sem validação de acesso do usuário), contendo os seguintes grá
 | Gabriel Souza      | Scrum Master  | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat-square&logo=linkedin&labelColor=blue)](http://www.linkedin.com/in/gabriel-alves-de-souza-5b7747267/) |
 | Alexandre Jonas | Developer     | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat-square&logo=linkedin&labelColor=blue)](http://www.linkedin.com/in/alexandre-jonas-de-souza-fonseca-989920181/) |
 | César Truyts       | Developer | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat-square&logo=linkedin&labelColor=blue)](http://www.linkedin.com/in/cesar-augusto-anselmo-pelogia-truyts-94a08a268/) |
-| Elbert Jean        | Developer     | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat-square&logo=linkedin&labelColor=blue)](http://www.linkedin.com/in/elbertjean/) |
+| Eliézer Lopes     | Developer     | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat-square&logo=linkedin&labelColor=blue)](https://www.linkedin.com/in/eli%C3%A9zer-lopes/) |
 | Gustavo Robert     | Developer     | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat-square&logo=linkedin&labelColor=blue)](http://www.linkedin.com/in/gustavo-robert/) |
 | Pablo Henrique     | Developer     | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat-square&logo=linkedin&labelColor=blue)](http://www.linkedin.com/in/pablo-henrique05) |
 | Vitor Morais       | Developer     | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat-square&logo=linkedin&labelColor=blue)](http://www.linkedin.com/in/vitor-faria-morais-330b19204/) |

@@ -1,0 +1,621 @@
+-- Scripts INSERT completos para o banco neo_horizon_test
+
+-- tabela dim_dev (já existente, mantendo)
+INSERT INTO dim_dev (dev_nome)
+VALUES ('Aline Dominique'),
+	   ('Felipe Faria'),
+	   ('Eroc Lourenço'),
+	   ('Alison Américo'),
+	   ('Franscisco Bustamante'),
+	   ('Helena Benevenuto'),
+	   ('João V Menezes'),
+	   ('Jose Thomazini'),
+	   ('Lucas Paiva'),
+	   ('Sérgio Casas'),
+	   ('Daniel Maturana');
+
+-- tabela dim_tipo (já existente, mantendo)
+INSERT INTO dim_tipo (tipo_nome)
+VALUES ('Bug'),
+	   ('Melhoria'),
+	   ('Tarefa');
+
+-- tabela dim_status (já existente, mantendo)
+INSERT INTO dim_status (status_nome)
+VALUES ('A Fazer'),
+	   ('Em Progresso'),
+	   ('Concluído');
+
+-- tabela dim_projeto (ajustando para usar IDENTITY)
+INSERT INTO dim_projeto (projeto_nome, projeto_key)
+VALUES ('SOS MNT', 'SM2'),
+	   ('SOS Edital', 'SE');
+
+-- tabela dim_periodo - criando períodos baseados nos work logs
+INSERT INTO dim_periodo (periodo_dia, periodo_semana, periodo_mes, periodo_ano)
+VALUES 
+	-- Janeiro 2025
+	(7, 2, 1, 2025),   -- 07/01/2025
+	(8, 2, 1, 2025),   -- 08/01/2025
+	(9, 2, 1, 2025),   -- 09/01/2025
+	(10, 2, 1, 2025),  -- 10/01/2025
+	(13, 3, 1, 2025),  -- 13/01/2025
+	(14, 3, 1, 2025),  -- 14/01/2025
+	(15, 3, 1, 2025),  -- 15/01/2025
+	(16, 3, 1, 2025),  -- 16/01/2025
+	(17, 3, 1, 2025),  -- 17/01/2025
+	(20, 4, 1, 2025),  -- 20/01/2025
+	(21, 4, 1, 2025),  -- 21/01/2025
+	(22, 4, 1, 2025),  -- 22/01/2025
+	(23, 4, 1, 2025),  -- 23/01/2025
+	(24, 4, 1, 2025),  -- 24/01/2025
+	(27, 5, 1, 2025),  -- 27/01/2025
+	(28, 5, 1, 2025),  -- 28/01/2025
+	(29, 5, 1, 2025),  -- 29/01/2025
+	(30, 5, 1, 2025),  -- 30/01/2025
+	(31, 5, 1, 2025),  -- 31/01/2025
+	-- Fevereiro 2025
+	(3, 6, 2, 2025),   -- 03/02/2025
+	(4, 6, 2, 2025),   -- 04/02/2025
+	(5, 6, 2, 2025),   -- 05/02/2025
+	(6, 6, 2, 2025),   -- 06/02/2025
+	(7, 6, 2, 2025),   -- 07/02/2025
+	(10, 7, 2, 2025),  -- 10/02/2025
+	(11, 7, 2, 2025),  -- 11/02/2025
+	(12, 7, 2, 2025),  -- 12/02/2025
+	(13, 7, 2, 2025),  -- 13/02/2025
+	(14, 7, 2, 2025),  -- 14/02/2025
+	(17, 8, 2, 2025),  -- 17/02/2025
+	(18, 8, 2, 2025),  -- 18/02/2025
+	(19, 8, 2, 2025),  -- 19/02/2025
+	(20, 8, 2, 2025),  -- 20/02/2025
+	(21, 8, 2, 2025),  -- 21/02/2025
+	(24, 9, 2, 2025),  -- 24/02/2025
+	(25, 9, 2, 2025),  -- 25/02/2025
+	(26, 9, 2, 2025),  -- 26/02/2025
+	(27, 9, 2, 2025),  -- 27/02/2025
+	(28, 9, 2, 2025),  -- 28/02/2025
+	-- Março 2025
+	(6, 10, 3, 2025),  -- 06/03/2025
+	(10, 11, 3, 2025), -- 10/03/2025
+	(11, 11, 3, 2025), -- 11/03/2025
+	(12, 11, 3, 2025), -- 12/03/2025
+	(13, 11, 3, 2025), -- 13/03/2025
+	(14, 11, 3, 2025), -- 14/03/2025
+	(17, 12, 3, 2025), -- 17/03/2025
+	(18, 12, 3, 2025), -- 18/03/2025
+	(20, 12, 3, 2025), -- 20/03/2025
+	(21, 12, 3, 2025), -- 21/03/2025
+	(24, 13, 3, 2025), -- 24/03/2025
+	(25, 13, 3, 2025), -- 25/03/2025
+	(26, 13, 3, 2025), -- 26/03/2025
+	(27, 13, 3, 2025), -- 27/03/2025
+	(28, 13, 3, 2025), -- 28/03/2025
+	(31, 14, 3, 2025), -- 31/03/2025
+	-- Abril 2025
+	(1, 14, 4, 2025),  -- 01/04/2025
+	(2, 14, 4, 2025),  -- 02/04/2025
+	(3, 14, 4, 2025),  -- 03/04/2025
+	(4, 14, 4, 2025),  -- 04/04/2025
+	(7, 15, 4, 2025),  -- 07/04/2025
+	(8, 15, 4, 2025),  -- 08/04/2025
+	(9, 15, 4, 2025),  -- 09/04/2025
+	(10, 15, 4, 2025), -- 10/04/2025
+	(11, 15, 4, 2025), -- 11/04/2025
+	(14, 16, 4, 2025), -- 14/04/2025
+	(15, 16, 4, 2025), -- 15/04/2025
+	(16, 16, 4, 2025), -- 16/04/2025
+	(17, 16, 4, 2025), -- 17/04/2025
+	(22, 17, 4, 2025), -- 22/04/2025
+	(23, 17, 4, 2025), -- 23/04/2025
+	(24, 17, 4, 2025), -- 24/04/2025
+	(25, 17, 4, 2025), -- 25/04/2025
+	(28, 18, 4, 2025), -- 28/04/2025
+	(29, 18, 4, 2025), -- 29/04/2025
+	(30, 18, 4, 2025), -- 30/04/2025
+	-- Maio 2025
+	(5, 19, 5, 2025),  -- 05/05/2025
+	(6, 19, 5, 2025),  -- 06/05/2025
+	(7, 19, 5, 2025),  -- 07/05/2025
+	(8, 19, 5, 2025),  -- 08/05/2025
+	(9, 19, 5, 2025),  -- 09/05/2025
+	(12, 20, 5, 2025), -- 12/05/2025
+	(13, 20, 5, 2025), -- 13/05/2025
+	(14, 20, 5, 2025), -- 14/05/2025
+	(15, 20, 5, 2025), -- 15/05/2025
+	(16, 20, 5, 2025), -- 16/05/2025
+	(19, 21, 5, 2025), -- 19/05/2025
+	(20, 21, 5, 2025), -- 20/05/2025
+	(21, 21, 5, 2025), -- 21/05/2025
+	(22, 21, 5, 2025), -- 22/05/2025
+	(23, 21, 5, 2025), -- 23/05/2025
+	(26, 22, 5, 2025), -- 26/05/2025
+	(27, 22, 5, 2025), -- 27/05/2025
+	(28, 22, 5, 2025), -- 28/05/2025
+	(29, 22, 5, 2025), -- 29/05/2025
+	(30, 22, 5, 2025), -- 30/05/2025
+	-- Junho 2025
+	(2, 23, 6, 2025),  -- 02/06/2025
+	(3, 23, 6, 2025),  -- 03/06/2025
+	(4, 23, 6, 2025),  -- 04/06/2025
+	(5, 23, 6, 2025),  -- 05/06/2025
+	(6, 23, 6, 2025),  -- 06/06/2025
+	(9, 24, 6, 2025),  -- 09/06/2025
+	(10, 24, 6, 2025), -- 10/06/2025
+	(11, 24, 6, 2025), -- 11/06/2025
+	(12, 24, 6, 2025), -- 12/06/2025
+	(13, 24, 6, 2025), -- 13/06/2025
+	(16, 25, 6, 2025), -- 16/06/2025
+	(17, 25, 6, 2025), -- 17/06/2025
+	(18, 25, 6, 2025), -- 18/06/2025
+	(23, 26, 6, 2025), -- 23/06/2025
+	(24, 26, 6, 2025), -- 24/06/2025
+	(25, 26, 6, 2025), -- 25/06/2025
+	(26, 26, 6, 2025), -- 26/06/2025
+	(27, 26, 6, 2025), -- 27/06/2025
+	(30, 27, 6, 2025), -- 30/06/2025
+	-- Julho 2025
+	(1, 27, 7, 2025),  -- 01/07/2025
+	(2, 27, 7, 2025),  -- 02/07/2025
+	(3, 27, 7, 2025),  -- 03/07/2025
+	(4, 27, 7, 2025),  -- 04/07/2025
+	(7, 28, 7, 2025),  -- 07/07/2025
+	(8, 28, 7, 2025),  -- 08/07/2025
+	(10, 28, 7, 2025), -- 10/07/2025
+	(11, 28, 7, 2025), -- 11/07/2025
+	(14, 29, 7, 2025), -- 14/07/2025
+	(16, 29, 7, 2025), -- 16/07/2025
+	(17, 29, 7, 2025), -- 17/07/2025
+	(18, 29, 7, 2025), -- 18/07/2025
+	(21, 30, 7, 2025), -- 21/07/2025
+	(22, 30, 7, 2025), -- 22/07/2025
+	(23, 30, 7, 2025), -- 23/07/2025
+	(24, 30, 7, 2025), -- 24/07/2025
+	(25, 30, 7, 2025), -- 25/07/2025
+	(28, 31, 7, 2025), -- 28/07/2025
+	(29, 31, 7, 2025), -- 29/07/2025
+	(30, 31, 7, 2025), -- 30/07/2025
+	(31, 31, 7, 2025), -- 31/07/2025
+	-- Agosto 2025
+	(1, 31, 8, 2025),  -- 01/08/2025
+	(4, 32, 8, 2025),  -- 04/08/2025
+	(5, 32, 8, 2025),  -- 05/08/2025
+	(6, 32, 8, 2025),  -- 06/08/2025
+	(7, 32, 8, 2025),  -- 07/08/2025
+	(8, 32, 8, 2025),  -- 08/08/2025
+	(11, 33, 8, 2025), -- 11/08/2025
+	(12, 33, 8, 2025), -- 12/08/2025
+	(13, 33, 8, 2025), -- 13/08/2025
+	(14, 33, 8, 2025), -- 14/08/2025
+	(15, 33, 8, 2025), -- 15/08/2025
+	(18, 34, 8, 2025), -- 18/08/2025
+	(19, 34, 8, 2025), -- 19/08/2025
+	(20, 34, 8, 2025), -- 20/08/2025
+	(21, 34, 8, 2025), -- 21/08/2025
+	(22, 34, 8, 2025), -- 22/08/2025
+	(25, 35, 8, 2025), -- 25/08/2025
+	(26, 35, 8, 2025), -- 26/08/2025
+	(27, 35, 8, 2025), -- 27/08/2025
+	(28, 35, 8, 2025), -- 28/08/2025
+	(29, 35, 8, 2025); -- 29/08/2025
+
+-- tabela fato_issue - SOS Edital (completando os dados faltantes)
+INSERT INTO fato_issue (projeto_id, periodo_id, status_id, tipo_id, issue_quantidade)
+VALUES 
+-- SE-5 (Kickoff) - 12/03/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 12 AND periodo_mes = 3 AND periodo_ano = 2025), 3, 3, 2),
+-- SE-6 (Aprovação telas) - 14/03/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 3 AND periodo_ano = 2025), 3, 2, 31),
+-- SE-7 (Esquema do banco de dados) - 14/04/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 5),
+-- SE-8 (Tela de listar editais) - 17/04/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 17 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 8),
+-- SE-9 (Listagem Proposta) - 19/05/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 19 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 3, 24),
+-- SE-10 (Cadastrar Edital) - 17/04/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 17 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 10),
+-- SE-11 (Cadastrar documentos obrigatórios) - 22/04/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 22 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 20),
+-- SE-12 (Cadastrar Proposta) - 12/05/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 12 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 3, 67),
+-- SE-14 (Cadastrar Linhas de apoio) - 30/04/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 30 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 33),
+-- SE-15 (Listagem linha de apoio) - 28/04/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 28 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 16),
+-- SE-25 (Listagem de projetos) - 3/02/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 3 AND periodo_mes = 2 AND periodo_ano = 2025), 3, 3, 10),
+-- SE-26 (Modelos do banco de dados) - 29/05/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 29 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 3, 10),
+-- SE-27 (Tela Parcelas) - 26/06/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 26 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 6),
+-- SE-28 (Tela Contratos) - 11/06/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 11 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 18),
+-- SE-29 (Tela visualização Proposta) - 3/06/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 3 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 8),
+-- SE-30 (Tela Inclusão de despesas) - 10/07/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 10 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 3, 78),
+-- SE-31 (Listagem de Relatório Técnico) - 16/06/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 16 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 4),
+-- SE-32 (Tela Gestão de Relatório Técnico) - 17/06/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 17 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 6),
+-- SE-33 (Alertas do Relatório Técnico) - 18/06/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 18 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 16),
+-- SE-36 (Criação de ambiente) - 24/03/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 24 AND periodo_mes = 3 AND periodo_ano = 2025), 3, 3, 7),
+-- SE-37 (Models) - 1/04/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 1 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 8),
+-- SE-38 (Reunião interna) - 13/05/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 13 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 3, 3),
+-- SE-39 (Reunião com cliente) - 26/06/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 26 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 1),
+-- SE-40 (Listagem Proponente) - 16/04/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 16 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 11),
+-- SE-41 (Cadastrar Proponente PF) - 22/04/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 22 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 17),
+-- SE-43 (Login do Proponente para Proposta) - 19/05/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 19 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 3, 23),
+-- SE-44 (EXTRA - Linha de Apoio em proposta) - 29/05/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 29 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 2, 18),
+-- SE-45 (Detalhes Proposta) - 2/06/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 2 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 6),
+-- SE-47 (Proposta não consegue ser enviada no dia) - 1/07/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 1 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 1, 24),
+-- SE-48 (Sentry - Erro ao enviar shapefile) - 1/07/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 1 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 1, 8),
+-- SE-50 (Alterar hora UTC para horário local) - 4/07/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 4 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 1, 1),
+-- SE-51 (GDALException) - 2/07/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 2 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 1, 4),
+-- SE-53 (Erro ao baixar os arquivos das proposta) - 10/07/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 10 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 1, 15),
+-- SE-54 (EXTRA - Aprovar ou rejeitar proposta) - 22/07/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 22 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 2, 7),
+-- SE-55 (EXTRA - Criar botão salvar em contratos) - 11/06/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 11 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 2, 4),
+-- SE-56 (EXTRA - Ajustar o código do ID) - 24/07/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 24 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 2, 6),
+-- SE-57 (EXTRA - Criar filtro para edital) - 25/06/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 25 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 2, 7),
+-- SE-58 (EXTRA - Criar opção de excluir proposta) - 23/07/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 23 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 2, 1),
+-- SE-61 (Replicar Tela Edital / Passa a chamar Ges) - 27/08/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 27 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 3, 9),
+-- SE-62 (Criar módulo na tela inicial - "Gestão de") - 14/08/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 3, 34),
+-- SE-66 (EXTRA - Botão de enviar Prestação de Con) - 24/07/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 24 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 2, 28),
+-- SE-67 (EXTRA - Criar campo texto para troca de) - 4/08/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 4 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 2, 16),
+-- SE-68 (EXTRA - Criar campo texto para troca de) - 25/08/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 25 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 2, 5),
+-- SE-70 (Ajustes solicitado em 06/08) - 6/08/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 6 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 2, 7),
+-- SE-71 (EXTRA - Aprovar / Corrigir prestação de c) - 11/08/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 11 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 2, 15),
+-- SE-72 (Envio de Email Prestação de Contas) - 14/08/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 3, 5),
+-- SE-73 (Pequenos ajustes 13/08) - 13/08/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 13 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 2, 6),
+-- SE-74 (EXTRA - Excluir botão excluir do Relatório) - 14/08/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 2, 6),
+-- SE-75 (Ajustes solicitado em 18/08) - 18/08/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 18 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 2, 9),
+-- SE-76 (EXTRA - Liberar e liquidar parcela) - 25/08/2025
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 25 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 2, 21);
+
+-- tabela fato_issue - SOS MNT
+INSERT INTO fato_issue (projeto_id, periodo_id, status_id, tipo_id, issue_quantidade)
+VALUES 
+-- SM2-2 (Alteração contrato de Pl) - 7/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 7 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 2, 3),
+-- SM2-3 (Lote Produtos Insumos) - 8/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 8 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 3, 2),
+-- SM2-4 (Alterar os dados Bancário) - 8/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 8 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 2, 1),
+-- SM2-5 (Acesso ao SGP - Modulo) - 9/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 9 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 3, 4),
+-- SM2-6 (Liberação Relatório antig) - 8/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 8 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 3, 5),
+-- SM2-7 (Reunião com cliente) - 10/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 10 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 3, 3),
+-- SM2-8 (Data modulo UCS - Prest) - 13/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 13 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 3, 10),
+-- SM2-9 (Alterar o tipo de Pagame) - 15/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 15 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 2, 2),
+-- SM2-11 (INSUMOS - FFV - OTP ID) - 13/02/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 13 AND periodo_mes = 2 AND periodo_ano = 2025), 3, 3, 11),
+-- SM2-12 (Alteração contrato de Pla) - 13/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 13 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 2, 5),
+-- SM2-13 (Análise - Sentry) - 10/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 10 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 1, 9),
+-- SM2-14 (Correção tabela Causa/R) - 16/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 16 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 1, 5),
+-- SM2-15 (API Categoria Item Orçam) - 12/08/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 12 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 3, 1),
+-- SM2-16 (API Categoria Item Orçam) - 16/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 16 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 3, 2),
+-- SM2-18 (Repetição Monitoramento) - 6/02/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 6 AND periodo_mes = 2 AND periodo_ano = 2025), 3, 3, 82),
+-- SM2-19 (Impressão do Relatório) - 23/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 23 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 3, 3),
+-- SM2-20 (Criar um Perfil - Propriet) - 20/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 20 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 3, 12),
+-- SM2-21 (Calculo Insumos) - 27/01/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 27 AND periodo_mes = 1 AND periodo_ano = 2025), 3, 3, 6),
+-- SM2-22 (Impressão relatório SGP) - 25/04/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 25 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 2),
+-- SM2-23 (INSUMOS - FFV - OTP uni) - 3/02/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 3 AND periodo_mes = 2 AND periodo_ano = 2025), 3, 3, 11),
+-- SM2-25 (Reunião com cliente) - 7/02/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 7 AND periodo_mes = 2 AND periodo_ano = 2025), 3, 3, 1),
+-- SM2-26 (Atualização Contrato - F) - 28/03/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 28 AND periodo_mes = 3 AND periodo_ano = 2025), 3, 2, 22),
+-- SM2-27 (Retorno Automático - T) - 20/02/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 20 AND periodo_mes = 2 AND periodo_ano = 2025), 3, 3, 17),
+-- SM2-28 (API Categoria Item Orça) - 19/02/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 19 AND periodo_mes = 2 AND periodo_ano = 2025), 3, 3, 1),
+-- SM2-29 (Entrada Insumos - Woops) - 14/02/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 2 AND periodo_ano = 2025), 3, 3, 3),
+-- SM2-30 (Subir ShapeFile Plantios) - 25/04/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 25 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 11),
+-- SM2-31 (Monitoramento de Dados) - 21/02/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 21 AND periodo_mes = 2 AND periodo_ano = 2025), 3, 3, 1),
+-- SM2-33 (Botão Envio Proposta Se) - 10/03/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 10 AND periodo_mes = 3 AND periodo_ano = 2025), 3, 3, 15),
+-- SM2-34 (Exportar Excel - Isumos) - 13/03/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 13 AND periodo_mes = 3 AND periodo_ano = 2025), 3, 3, 9),
+-- SM2-35 (reunião com cliente) - 14/03/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 3 AND periodo_ano = 2025), 3, 3, 4),
+-- SM2-36 (Filtro CPC 30) - 21/03/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 21 AND periodo_mes = 3 AND periodo_ano = 2025), 3, 3, 15),
+-- SM2-37 (ISUMOS - FFV - OTP) - 1/04/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 1 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 13),
+-- SM2-38 (Proposta Seguro - FFV e) - 1/04/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 1 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 39),
+-- SM2-40 (Acesso Relatório - Perfil) - 16/04/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 16 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 3),
+-- SM2-41 (Associa + de uma área pl) - 14/05/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 3, 3),
+-- SM2-42 (Erro cadastro parcelas) - 14/04/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 1, 1),
+-- SM2-44 (Relatório de Monitoramen) - 22/04/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 22 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 16),
+-- SM2-45 (Status Contrato - TCRA) - 22/04/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 22 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 3, 2),
+-- SM2-46 (Relatório Monitoramento) - 6/05/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 6 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 3, 30),
+-- SM2-48 (reunião cliente maio 202) - 9/05/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 9 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 3, 3),
+-- SM2-49 (Cadastra um projeto - U) - 19/05/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 19 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 3, 13),
+-- SM2-50 (Alteração estágio Aderen) - 29/07/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 29 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 2, 30),
+-- SM2-51 (Duplicado dados monitor) - 17/06/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 17 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 1, 7),
+-- SM2-52 (Monitoramento fotos adic) - 6/06/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 6 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 8),
+-- SM2-53 (ISUMOS - FFV - OTP) - 4/06/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 4 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 8),
+-- SM2-54 (Organização Menu Latera) - 26/05/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 26 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 2, 32),
+-- SM2-55 (Reunião cliente junho 20) - 6/06/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 6 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 3),
+-- SM2-57 (Erro ao liberar parcela) - 10/06/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 10 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 1, 19),
+-- SM2-58 (Direcionamento URL - s) - 3/06/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 3 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 3),
+-- SM2-59 (Envio item Orçamento no) - 23/06/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 23 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 28),
+-- SM2-60 (Liberação do relatório c) - 17/06/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 17 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 16),
+-- SM2-61 (SGP fora do ar) - 24/06/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 24 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 1, 4),
+-- SM2-62 (SOSMA-H7 - TypeError: C) - 26/06/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 26 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 1, 3),
+-- SM2-63 (Permissões do tcra do pa) - 23/06/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 23 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 3, 25),
+-- SM2-65 (Reunião com cliente) - 16/07/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 16 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 3, 4),
+-- SM2-66 (Planejamento interno) - 7/07/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 7 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 3, 5),
+-- SM2-67 (Ao redefinir senha - TCR) - 4/08/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 4 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 1, 10),
+-- SM2-69 (Acesso SGP Antigo - Ucs) - 23/07/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 23 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 3, 11),
+-- SM2-72 (Reunião com cliente) - 15/08/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 15 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 3, 1),
+-- SM2-74 (Alteração do Contrato) - 14/08/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 2, 11),
+-- SM2-75 (Fundo do Mapa - TCRA e) - 19/08/2025
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 19 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 2, 4);
+
+-- tabela fato_custo_hora - Dados mockados baseados nos work logs
+INSERT INTO fato_custo_hora (projeto_id, periodo_id, dev_id, custo, horas_quantidade)
+VALUES
+-- SOS Edital - Eric Lourenço (dev_id = 3)
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 5000, 5),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 17 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 9000, 9),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 30 AND periodo_mes = 4 AND periodo_ano = 2025), 3, 12000, 12),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 12 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 6000, 6),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 19 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 6000, 6),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 29 AND periodo_mes = 5 AND periodo_ano = 2025), 3, 6000, 6),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 11 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 6000, 6),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 26 AND periodo_mes = 6 AND periodo_ano = 2025), 3, 6000, 6),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 1 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 6000, 6),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 10 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 6000, 6),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 24 AND periodo_mes = 7 AND periodo_ano = 2025), 3, 6000, 6),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 4 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 6000, 6),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 6000, 6),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 25 AND periodo_mes = 8 AND periodo_ano = 2025), 3, 6000, 6),
+
+-- SOS Edital - Felipe Faria (dev_id = 2)
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 12 AND periodo_mes = 3 AND periodo_ano = 2025), 2, 1000, 1),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 3 AND periodo_ano = 2025), 2, 10000, 10),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 24 AND periodo_mes = 3 AND periodo_ano = 2025), 2, 1000, 1),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 4 AND periodo_ano = 2025), 2, 3000, 3),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 17 AND periodo_mes = 4 AND periodo_ano = 2025), 2, 2000, 2),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 30 AND periodo_mes = 4 AND periodo_ano = 2025), 2, 3000, 3),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 12 AND periodo_mes = 5 AND periodo_ano = 2025), 2, 3000, 3),
+
+-- SOS Edital - Lucas Paiva (dev_id = 9)
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 17 AND periodo_mes = 4 AND periodo_ano = 2025), 9, 8000, 8),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 22 AND periodo_mes = 4 AND periodo_ano = 2025), 9, 20000, 20),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 1 AND periodo_mes = 7 AND periodo_ano = 2025), 9, 8000, 8),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 8 AND periodo_ano = 2025), 9, 5000, 5),
+
+-- SOS Edital - Sergio Casas (dev_id = 10)
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 24 AND periodo_mes = 3 AND periodo_ano = 2025), 10, 3000, 3),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 13 AND periodo_mes = 5 AND periodo_ano = 2025), 10, 3000, 3),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 19 AND periodo_mes = 5 AND periodo_ano = 2025), 10, 4000, 4),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 1 AND periodo_mes = 7 AND periodo_ano = 2025), 10, 8000, 8),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 10 AND periodo_mes = 7 AND periodo_ano = 2025), 10, 15000, 15),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 8 AND periodo_ano = 2025), 10, 13000, 13),
+(2, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 26 AND periodo_mes = 6 AND periodo_ano = 2025), 10, 1000, 1),
+
+-- SOS MNT - Felipe Faria (dev_id = 2)
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 6 AND periodo_mes = 2 AND periodo_ano = 2025), 2, 2000, 2),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 14 AND periodo_mes = 2 AND periodo_ano = 2025), 2, 1000, 1),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 21 AND periodo_mes = 3 AND periodo_ano = 2025), 2, 1000, 1),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 28 AND periodo_mes = 3 AND periodo_ano = 2025), 2, 1000, 1),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 1 AND periodo_mes = 4 AND periodo_ano = 2025), 2, 1000, 1),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 6 AND periodo_mes = 5 AND periodo_ano = 2025), 2, 1000, 1),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 4 AND periodo_mes = 6 AND periodo_ano = 2025), 2, 1000, 1),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 29 AND periodo_mes = 7 AND periodo_ano = 2025), 2, 1000, 1),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 19 AND periodo_mes = 8 AND periodo_ano = 2025), 2, 1000, 1),
+
+-- SOS MNT - Lucas Paiva (dev_id = 9)
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 23 AND periodo_mes = 6 AND periodo_ano = 2025), 9, 4000, 4),
+
+-- SOS MNT - Sergio Casas (dev_id = 10) - Principal desenvolvedor
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 7 AND periodo_mes = 1 AND periodo_ano = 2025), 10, 3000, 3),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 8 AND periodo_mes = 1 AND periodo_ano = 2025), 10, 2000, 2),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 9 AND periodo_mes = 1 AND periodo_ano = 2025), 10, 4000, 4),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 10 AND periodo_mes = 1 AND periodo_ano = 2025), 10, 9000, 9),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 13 AND periodo_mes = 1 AND periodo_ano = 2025), 10, 5000, 5),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 15 AND periodo_mes = 1 AND periodo_ano = 2025), 10, 10000, 10),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 16 AND periodo_mes = 1 AND periodo_ano = 2025), 10, 5000, 5),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 20 AND periodo_mes = 1 AND periodo_ano = 2025), 10, 9000, 9),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 23 AND periodo_mes = 1 AND periodo_ano = 2025), 10, 5000, 5),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 27 AND periodo_mes = 1 AND periodo_ano = 2025), 10, 6000, 6),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 29 AND periodo_mes = 1 AND periodo_ano = 2025), 10, 8000, 8),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 3 AND periodo_mes = 2 AND periodo_ano = 2025), 10, 11000, 11),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 6 AND periodo_mes = 2 AND periodo_ano = 2025), 10, 82000, 82),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 13 AND periodo_mes = 2 AND periodo_ano = 2025), 10, 11000, 11),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 20 AND periodo_mes = 2 AND periodo_ano = 2025), 10, 17000, 17),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 10 AND periodo_mes = 3 AND periodo_ano = 2025), 10, 15000, 15),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 13 AND periodo_mes = 3 AND periodo_ano = 2025), 10, 9000, 9),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 21 AND periodo_mes = 3 AND periodo_ano = 2025), 10, 15000, 15),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 28 AND periodo_mes = 3 AND periodo_ano = 2025), 10, 22000, 22),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 1 AND periodo_mes = 4 AND periodo_ano = 2025), 10, 39000, 39),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 22 AND periodo_mes = 4 AND periodo_ano = 2025), 10, 18000, 18),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 25 AND periodo_mes = 4 AND periodo_ano = 2025), 10, 11000, 11),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 6 AND periodo_mes = 5 AND periodo_ano = 2025), 10, 30000, 30),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 19 AND periodo_mes = 5 AND periodo_ano = 2025), 10, 13000, 13),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 26 AND periodo_mes = 5 AND periodo_ano = 2025), 10, 32000, 32),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 4 AND periodo_mes = 6 AND periodo_ano = 2025), 10, 8000, 8),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 10 AND periodo_mes = 6 AND periodo_ano = 2025), 10, 19000, 19),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 17 AND periodo_mes = 6 AND periodo_ano = 2025), 10, 23000, 23),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 23 AND periodo_mes = 6 AND periodo_ano = 2025), 10, 53000, 53),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 7 AND periodo_mes = 7 AND periodo_ano = 2025), 10, 8000, 8),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 29 AND periodo_mes = 7 AND periodo_ano = 2025), 10, 30000, 30),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 4 AND periodo_mes = 8 AND periodo_ano = 2025), 10, 14000, 14),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 12 AND periodo_mes = 8 AND periodo_ano = 2025), 10, 11000, 11),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 15 AND periodo_mes = 8 AND periodo_ano = 2025), 10, 1000, 1),
+(1, (SELECT periodo_id FROM dim_periodo WHERE periodo_dia = 19 AND periodo_mes = 8 AND periodo_ano = 2025), 10, 4000, 4);
+
+INSERT INTO dim_atividade (atividade_nome, atividade_descricao, projeto_id, ativo) VALUES
+('Desenvolvimento Frontend', 'Desenvolvimento de interfaces de usuário e componentes React', 1, true),
+('Desenvolvimento Backend', 'Desenvolvimento de APIs REST e serviços Spring Boot', 1, true),
+('Testes Unitários', 'Criação e execução de testes unitários e de integração', 1, true),
+('Code Review', 'Revisão de código de outros desenvolvedores', 1, true),
+('Documentação', 'Criação e atualização de documentação técnica', 1, true),
+('Reuniões', 'Participação em reuniões de equipe e planejamento', 1, true),
+('Bug Fix', 'Correção de bugs reportados pelos usuários', 1, true),
+('Refatoração', 'Melhoria e otimização de código existente', 1, true),
+('Deploy', 'Processo de deploy e configuração de ambientes', 1, true),
+('Análise de Requisitos', 'Análise e validação de requisitos funcionais', 1, true);
+
+-- Setembro 2025 - Desenvolvedor 1
+INSERT INTO fato_apontamento_horas (dev_id, atividade_id, projeto_id, data_apontamento, horas_trabalhadas, descricao_trabalho, data_criacao) VALUES
+(1, 1, 1, '2025-09-23', 6.0, 'Implementação da tela de login e cadastro', NOW()),
+(1, 2, 1, '2025-09-23', 2.0, 'Criação de endpoints de autenticação', NOW()),
+(1, 1, 1, '2025-09-24', 7.5, 'Desenvolvimento do dashboard principal', NOW()),
+(1, 4, 1, '2025-09-24', 0.5, 'Code review do PR #123', NOW()),
+(1, 3, 1, '2025-09-25', 4.0, 'Criação de testes para módulo de auth', NOW()),
+(1, 7, 1, '2025-09-25', 3.0, 'Correção de bugs no formulário de cadastro', NOW()),
+(1, 6, 1, '2025-09-25', 1.0, 'Daily meeting e planning', NOW()),
+(1, 2, 1, '2025-09-26', 5.0, 'Desenvolvimento da API de relatórios', NOW()),
+(1, 5, 1, '2025-09-26', 2.0, 'Documentação das APIs criadas', NOW()),
+(1, 8, 1, '2025-09-26', 1.0, 'Refatoração do service de usuários', NOW()),
+
+-- Desenvolvedor 2
+(2, 2, 1, '2025-09-23', 8.0, 'Criação da estrutura do banco de dados', NOW()),
+(2, 10, 1, '2025-09-24', 2.0, 'Análise dos requisitos do módulo financeiro', NOW()),
+(2, 2, 1, '2025-09-24', 6.0, 'Implementação das entidades JPA', NOW()),
+(2, 3, 1, '2025-09-25', 4.0, 'Testes de integração do banco de dados', NOW()),
+(2, 6, 1, '2025-09-25', 1.0, 'Reunião de alinhamento técnico', NOW()),
+(2, 7, 1, '2025-09-25', 3.0, 'Correção de performance nas queries', NOW()),
+(2, 2, 1, '2025-09-26', 4.0, 'Desenvolvimento de endpoints CRUD', NOW()),
+(2, 4, 1, '2025-09-26', 2.0, 'Review de código do frontend', NOW()),
+(2, 9, 1, '2025-09-26', 2.0, 'Deploy da versão 1.2 em homologação', NOW()),
+
+-- Desenvolvedor 3
+(3, 1, 1, '2025-09-23', 7.0, 'Criação dos componentes React', NOW()),
+(3, 6, 1, '2025-09-23', 1.0, 'Sprint planning meeting', NOW()),
+(3, 1, 1, '2025-09-24', 6.0, 'Integração com APIs backend', NOW()),
+(3, 3, 1, '2025-09-24', 2.0, 'Testes unitários dos componentes', NOW()),
+(3, 7, 1, '2025-09-25', 3.0, 'Correção de bugs de responsividade', NOW()),
+(3, 1, 1, '2025-09-25', 4.0, 'Implementação de validações de formulário', NOW()),
+(3, 5, 1, '2025-09-25', 1.0, 'Documentação dos componentes criados', NOW()),
+(3, 8, 1, '2025-09-26', 2.0, 'Refatoração do código de estilização', NOW()),
+(3, 1, 1, '2025-09-26', 6.0, 'Desenvolvimento de telas de relatório', NOW()),
+
+-- Dados da semana anterior (16-20 Setembro)
+(1, 2, 1, '2025-09-16', 8.0, 'Setup inicial do projeto Spring Boot', NOW()),
+(1, 10, 1, '2025-09-17', 3.0, 'Levantamento de requisitos técnicos', NOW()),
+(1, 2, 1, '2025-09-17', 5.0, 'Configuração do banco de dados', NOW()),
+(1, 5, 1, '2025-09-18', 2.0, 'Criação do README do projeto', NOW()),
+(1, 2, 1, '2025-09-18', 6.0, 'Implementação da arquitetura base', NOW()),
+(1, 6, 1, '2025-09-19', 2.0, 'Reunião com stakeholders', NOW()),
+(1, 1, 1, '2025-09-19', 6.0, 'Prototipação das telas principais', NOW()),
+(1, 9, 1, '2025-09-20', 1.0, 'Deploy do ambiente de desenvolvimento', NOW()),
+(1, 3, 1, '2025-09-20', 7.0, 'Configuração do pipeline de testes', NOW()),
+
+(2, 2, 1, '2025-09-16', 7.0, 'Modelagem do banco de dados', NOW()),
+(2, 5, 1, '2025-09-16', 1.0, 'Documentação do modelo de dados', NOW()),
+(2, 2, 1, '2025-09-17', 8.0, 'Criação dos scripts DDL', NOW()),
+(2, 3, 1, '2025-09-18', 4.0, 'Testes de carga no banco', NOW()),
+(2, 2, 1, '2025-09-18', 4.0, 'Desenvolvimento dos repositories', NOW()),
+(2, 4, 1, '2025-09-19', 3.0, 'Code review da estrutura inicial', NOW()),
+(2, 2, 1, '2025-09-19', 5.0, 'Implementação dos services básicos', NOW()),
+(2, 6, 1, '2025-09-20', 1.5, 'Demo para o cliente', NOW()),
+(2, 7, 1, '2025-09-20', 6.5, 'Correções após feedback do cliente', NOW()),
+
+(3, 1, 1, '2025-09-16', 6.0, 'Setup do ambiente React', NOW()),
+(3, 10, 1, '2025-09-16', 2.0, 'Análise do design system', NOW()),
+(3, 1, 1, '2025-09-17', 8.0, 'Criação da estrutura de componentes', NOW()),
+(3, 1, 1, '2025-09-18', 7.0, 'Implementação do layout base', NOW()),
+(3, 5, 1, '2025-09-18', 1.0, 'Documentação dos padrões de código', NOW()),
+(3, 3, 1, '2025-09-19', 4.0, 'Setup dos testes automatizados', NOW()),
+(3, 1, 1, '2025-09-19', 4.0, 'Desenvolvimento dos primeiros componentes', NOW()),
+(3, 6, 1, '2025-09-20', 2.0, 'Apresentação do progresso', NOW()),
+(3, 7, 1, '2025-09-20', 6.0, 'Ajustes na responsividade', NOW()),
+
+-- Dados mais recentes (27-30 Setembro)
+(1, 1, 1, '2025-09-27', 5.0, 'Implementação de filtros avançados', NOW()),
+(1, 3, 1, '2025-09-27', 3.0, 'Testes de integração das APIs', NOW()),
+(1, 2, 1, '2025-09-30', 4.0, 'Otimização de queries complexas', NOW()),
+(1, 4, 1, '2025-09-30', 2.0, 'Review do código de métricas', NOW()),
+(1, 6, 1, '2025-09-30', 2.0, 'Retrospectiva da sprint', NOW()),
+
+(2, 2, 1, '2025-09-27', 6.0, 'Desenvolvimento do módulo de relatórios', NOW()),
+(2, 5, 1, '2025-09-27', 2.0, 'Atualização da documentação da API', NOW()),
+(2, 8, 1, '2025-09-30', 3.0, 'Refatoração do código de métricas', NOW()),
+(2, 9, 1, '2025-09-30', 2.0, 'Deploy em produção', NOW()),
+(2, 7, 1, '2025-09-30', 3.0, 'Monitoramento pós-deploy', NOW()),
+
+(3, 1, 1, '2025-09-27', 7.0, 'Finalização das telas de métricas', NOW()),
+(3, 3, 1, '2025-09-27', 1.0, 'Testes E2E das novas funcionalidades', NOW()),
+(3, 1, 1, '2025-09-30', 4.0, 'Implementação de loading states', NOW()),
+(3, 7, 1, '2025-09-30', 2.0, 'Correção de bugs reportados', NOW()),
+(3, 5, 1, '2025-09-30', 2.0, 'Atualização do guia de usuário', NOW());

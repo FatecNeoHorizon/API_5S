@@ -1,0 +1,86 @@
+-- Database: neo_horizon_test
+--Version 1.0
+
+--DROP DATABASE IF EXISTS neo_horizon_test;
+/*
+CREATE DATABASE neo_horizon_test
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'pt-BR'
+    LC_CTYPE = 'pt-BR'
+    LOCALE_PROVIDER = 'libc'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+*/
+
+create table if not exists dim_periodo (
+ periodo_id bigint generated always as identity,
+ periodo_dia int,
+ periodo_semana int,
+ periodo_mes int,
+ periodo_ano int,
+ primary key (periodo_id)
+);
+
+create table if not exists dim_projeto (
+ projeto_id bigint generated always as identity,
+ projeto_nome varchar(60) not null,
+ projeto_key varchar(60) not null,
+ projeto_jira_id varchar (60),
+ primary key (projeto_id),
+ unique (projeto_key)
+);
+
+create table if not exists dim_dev (
+ dev_id bigint generated always as identity,
+ dev_nome varchar(60) not null,
+ dev_email varchar(60) ,
+ dev_senha varchar (60),
+ dev_role varchar (60),
+ dev_custo_hora int,
+ primary key (dev_id)
+);
+
+create table if not exists dim_status (
+ status_id bigint generated always as identity,
+ status_nome varchar(60) not null,
+ status_descricao varchar(60) ,
+ primary key (status_id)
+);
+
+create table if not exists dim_tipo (
+ tipo_id bigint generated always as identity,
+ tipo_nome varchar(60) not null,
+ tipo_descricao varchar(60) ,
+ primary key (tipo_id)
+);
+
+create table if not exists fato_issue (
+ issue_id bigint generated always as identity,
+ projeto_id bigint not null,
+ periodo_id bigint not null,
+ status_id bigint not null,
+ tipo_id bigint not null,
+ issue_quantidade bigint not null,
+ primary key (issue_id, projeto_id, periodo_id, status_id, tipo_id),
+ foreign key (projeto_id) references dim_projeto (projeto_id) on delete restrict on update cascade,
+ foreign key (periodo_id) references dim_periodo (periodo_id) on delete restrict on update cascade,
+ foreign key (status_id) references dim_status (status_id) on delete restrict on update cascade,
+ foreign key (tipo_id) references dim_tipo (tipo_id) on delete restrict on update cascade
+);
+
+create table if not exists fato_custo_hora (
+ custo_hora_id bigint generated always as identity,
+ projeto_id bigint not null,
+ periodo_id bigint not null,
+ dev_id bigint not null,
+ custo int,
+ horas_quantidade int,
+ primary key (custo_hora_id, projeto_id, periodo_id, dev_id),
+ foreign key (projeto_id) references dim_projeto (projeto_id) on delete restrict on update cascade,
+ foreign key (periodo_id) references dim_periodo (periodo_id) on delete restrict on update cascade,
+ foreign key (dev_id) references dim_dev (dev_id) on delete restrict on update cascade
+);
+

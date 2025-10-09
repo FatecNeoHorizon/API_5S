@@ -98,14 +98,19 @@ Tela inicial (sem validação de acesso do usuário), contendo os seguintes grá
 
 <details>
 <summary>Sprint 2</summary>
+Proposta de entrega: 
+
+- Integração da API: substituição dos dados iniciais pela implementação real da API, garantindo que todas as informações exibidas sejam dinâmicas.
+- Métricas de bugs: desenvolvimento de uma seção com gráficos interativos para visualização das principais métricas relacionadas a bugs.
+- Gestão de custo/hora dos desenvolvedores: criação de uma interface para listar os usuários e permitir a edição dinâmica do valor/hora trabalhado por cada um. 
 
 | ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
 |:---|:---|:---|:---|:---|
 | TT02 | 1 | Alta | Refatorar modelo de banco alinhado ao ETL e cadastro de valor hora dev e documentação de processos de DevOps | RF04 |
-| US05 | 3 | Alta |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | RF02 |
-| US06 | 4 | Média | Como Gerente de Projeto, desejo metrificar a quantidade de atividades relacionadas à correção de bugs para gerenciar qualidade e reduzir retrabalhos. | RF01 |
-| US07 | 5 | Média | Como Gerente de Projeto, desejo informar de forma dinâmica o custo por hora dos desenvolvedores para analisar assertivamente métricas orçamentárias. | RF01 |
-| US08 | 6 | Baixa | Como Gerente de Projeto, desejo realizar filtros dos dados exibidos por projeto para construir vistas dinâmicas. | RF01 |
+| US05 | 2 | Alta |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | RF02 |
+| US06 | 3 | Média | Como Gerente de Projeto, desejo metrificar a quantidade de atividades relacionadas à correção de bugs para gerenciar qualidade e reduzir retrabalhos. | RF01 |
+| US07 | 4 | Média | Como Gerente de Projeto, desejo informar de forma dinâmica o custo por hora dos desenvolvedores para analisar assertivamente métricas orçamentárias. | RF01 |
+| US08 | 5 | Baixa | Como Gerente de Projeto, desejo realizar filtros dos dados exibidos por projeto para construir vistas dinâmicas. | RF01 |
 </details>
 
 <details>

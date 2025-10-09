@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS dim_tipo (
 	tipo_id BIGINT GENERATED ALWAYS AS IDENTITY,
 	tipo_nome VARCHAR(255) NOT NULL,
 	tipo_descricao VARCHAR(255),
-	status_jira_id INTEGER,
+	tipo_jira_id INTEGER,
 	PRIMARY KEY (tipo_id)
 );
 

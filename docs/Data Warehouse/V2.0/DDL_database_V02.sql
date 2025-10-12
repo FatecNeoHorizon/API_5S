@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS dim_projeto (
 CREATE TABLE IF NOT EXISTS dim_status (
 	status_id BIGINT GENERATED ALWAYS AS IDENTITY,
 	status_nome VARCHAR(255) NOT NULL,
-	status_jira_id INTEGER,
+	status_jira_id VARCHAR(255),
 	PRIMARY KEY (status_id)
 );
 
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS dim_tipo (
 	tipo_id BIGINT GENERATED ALWAYS AS IDENTITY,
 	tipo_nome VARCHAR(255) NOT NULL,
 	tipo_descricao VARCHAR(255),
-	tipo_jira_id INTEGER,
+	tipo_jira_id VARCHAR(255),
 	PRIMARY KEY (tipo_id)
 );
 

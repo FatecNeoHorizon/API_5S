@@ -2,11 +2,12 @@
 <!-- <img scr="./" alt="Logotipo da equipe" width="40%"> -->
 
 <p align="center">
-  <a href="#anger-problema">Problema</a> •
+  <a href="#problema">Problema</a> •
   <a href="#dart-objetivo-do-projeto">Objetivo do Projeto</a> •
-  <a href="#requisitos-funcionais-e-nao-funcionais">Requisitos Funcionais e Não Funcionais</a> •
+  <a href="#requisitos-funcionais-e-não-funcionais">Requisitos Funcionais e Não Funcionais</a> •
   <a href="#date-backlog-do-produto">Product Backlog</a> •
   <a href="#date-sprint-backlog">Sprint Backlog</a> •
+  <a href="#padrões-de-desenvolvimento">Padrões de desenvolvimento</a> •
   <a href="#cronograma">Cronograma</a> •
   <a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a>
   <a href="#mortar_board-integrantes-da-equipe">Integrantes da Equipe</a> •
@@ -125,6 +126,9 @@ Proposta de entrega:
 
 <br>
 
+## Padrões de desenvolvimento
+[Estrutura de branches e padrão de commits](https://github.com/FatecNeoHorizon/API_5S/wiki/Padr%C3%B5es-de-Desenvolvimento)
+
 ## :calendar: <a id="cronograma"> Cronograma 📅 </a>
 
 | Sprint  | Nome | Data inicio  | Data Fim | Status |
@@ -132,7 +136,7 @@ Proposta de entrega:
 | --  | KickOff                    | 25/08   | 29/08 |  X  |
 |  1  | Sprint 1                   | 08/09   | 28/09 |  X  |
 |  2  | Sprint review / Planning   | 29/09   | 03/10 |  X  |
-|  3  | Sprint 2                   | 06/10   | 26/10 |     |
+|  3  | Sprint 2                   | 06/10   | 26/10 |  X  |
 |  4  | Sprint review / Planning   | 27/10   | 31/10 |     |
 |  5  | Sprint 3                   | 03/11   | 23/11 |     |
 |  6  | Sprint review              | 24/11   | 28/11 |     |

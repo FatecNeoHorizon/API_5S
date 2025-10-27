@@ -136,7 +136,7 @@ Proposta de entrega:
 | --  | KickOff                    | 25/08   | 29/08 |  X  |
 |  1  | Sprint 1                   | 08/09   | 28/09 |  X  |
 |  2  | Sprint review / Planning   | 29/09   | 03/10 |  X  |
-|  3  | Sprint 2                   | 06/10   | 26/10 |     |
+|  3  | Sprint 2                   | 06/10   | 26/10 |  X  |
 |  4  | Sprint review / Planning   | 27/10   | 31/10 |     |
 |  5  | Sprint 3                   | 03/11   | 23/11 |     |
 |  6  | Sprint review              | 24/11   | 28/11 |     |

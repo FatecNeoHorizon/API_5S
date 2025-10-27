@@ -8,8 +8,9 @@
   <a href="#date-backlog-do-produto">Product Backlog</a> •
   <a href="#date-sprint-backlog">Sprint Backlog</a> •
   <a href="#cronograma">Cronograma</a> •
-  <a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a>
   <a href="#mortar_board-integrantes-da-equipe">Integrantes da Equipe</a> •
+  <a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a>
+
 </p>
 
 ## :anger: Problema <a id="problema"></a>
@@ -25,93 +26,85 @@ Desenvolver uma aplicação web de inteligência de negócios para gestão de pr
 O objetivo da solução é transformar dados brutos em informações estratégicas, capacitando os usuários na tomada de decisões de forma ágil e assertiva.
 
 
-## Requisitos Funcionais e Não Funcionais
+## Requisitos Funcionais e Não Funcionai<a id="requisitos-funcionais-e-nao-funcionais"></a>
 <details>
 
-<summary>Clique aqui</summary>
+<summary>Mostrar Requisitos Funcionais, Não Funcionais e Documentação</summary>
 
 ### Requisitos Funcionais
 
 | ID | Requisito | Descrição |
 |:---|:---|:---|
-| RF01 | *Painel de Carga de Trabalho Individual* | O sistema deve exibir para o usuário logado uma visão de todos os cards atribuídos a ele, agrupados por projeto. O usuário deve ser capaz de ver a quantidade de cards em cada status, facilitando o acompanhamento do seu progresso pessoal em cada projeto. |
-| RF02 | *Relatório de Desempenho do Time* | O sistema deverá permitir que um Líder de Equipe visualize a carga de trabalho de seu time. O relatório deverá exibir o número de cards atribuídos a cada membro e a quantidade de horas utilizadas por eles, com a possibilidade de filtrar por projeto. |
-| RF03 | *Painel de Visão Geral do Projeto e Custos* | O sistema deverá exibir para usuários com nível de acesso de "Gerente de Projeto" um painel com a quantidade total de cards por status para um projeto selecionado. O sistema também deverá exibir o tempo médio de ciclo (tempo entre criação e finalização) para as tarefas do projeto, além dos custos do projeto. |
-| RF04 | *Relatório de Atividades por Período* | O sistema deverá apresentar um relatório consolidado que exibe a quantidade de cards criados, movidos ou concluídos em períodos pré-definidos (dia, semana, mês ou ano). A visualização deverá permitir a quebra das atividades por desenvolvedor e por projeto. |
-| RF05 | *Identificação de Bugs e Retrabalhos* | O sistema deverá identificar e contabilizar a quantidade de cards do tipo "bug". Um relatório com o total de bugs por projeto e por desenvolvedor deverá ser visível para gestores. |
-| RF06 | *Sistema de Controle de Acesso* | O sistema deverá implementar três níveis de permissão (Membro de Equipe, Líder de Equipe e Gerente de Projeto) que limitam a visualização dos dados. As permissões deverão ser aplicadas em todos os painéis e relatórios, garantindo que cada usuário visualize apenas as informações pertinentes às suas responsabilidades e aos projetos que ele gerencia. |
-| RF07 | Relatório de Horas por Módulo | O sistema deverá disponibilizar um relatório que apresente a quantidade de horas registradas nos módulos Épico, Produto e Entregável. O objetivo é permitir que o usuário tenha acesso a essas informações de forma clara e organizada, apoiando a análise de esforço e acompanhamento do progresso dos projetos. |
+| **NH-RF-001** | *Painel de Carga de Trabalho Individual* | O sistema deve exibir para o usuário logado uma visão de todos os cards atribuídos a ele, agrupados por projeto. O usuário deve ser capaz de ver a quantidade de cards em cada status, facilitando o acompanhamento do seu progresso pessoal em cada projeto. 
+| **NH-RF-002** | *Relatório de Desempenho do Time* | O sistema deverá permitir que um Líder de Equipe visualize a carga de trabalho de seu time. O relatório deverá exibir o número de cards atribuídos a cada membro e a quantidade de horas utilizadas por eles, com a possibilidade de filtrar por projeto. |
+| **NH-RF-003** | *Painel de Visão Geral do Projeto e Custos* | O sistema deverá exibir para usuários com nível de acesso de "Gerente de Projeto" um painel com a quantidade total de cards por status para um projeto selecionado. O sistema também deverá exibir o tempo médio de ciclo (tempo entre criação e finalização) para as tarefas do projeto, além dos custos do projeto. |
+| **NH-RF-004** | *Relatório de Atividades por Período* | O sistema deverá apresentar um relatório consolidado que exibe a quantidade de cards criados, movidos ou concluídos em períodos pré-definidos (dia, semana, mês ou ano). A visualização deverá permitir a quebra das atividades por desenvolvedor e por projeto. |
+| **NH-RF-005** | *Identificação de Bugs e Retrabalhos* | O sistema deverá identificar e contabilizar a quantidade de cards do tipo "bug". Um relatório com o total de bugs por projeto e por desenvolvedor deverá ser visível para gestores. |
+| **NH-RF-006** | *Sistema de Controle de Acesso* | O sistema deverá implementar três níveis de permissão (Membro de Equipe, Líder de Equipe e Gerente de Projeto) que limitam a visualização dos dados. As permissões deverão ser aplicadas em todos os painéis e relatórios, garantindo que cada usuário visualize apenas as informações pertinentes às suas responsabilidades e aos projetos que ele gerencia. |
+| **NH-RF-007** | Relatório de Horas por Módulo | O sistema deverá disponibilizar um relatório que apresente a quantidade de horas registradas nos módulos Épico, Produto e Entregável. O objetivo é permitir que o usuário tenha acesso a essas informações de forma clara e organizada, apoiando a análise de esforço e acompanhamento do progresso dos projetos. |
 
 ### Requisitos Não Funcionais
 
 | ID | Requisito | Descrição |
 |:---|:---|:---|
-| RNF01 | *Documentação Técnica* | A API desenvolvida para se conectar com o Jira deverá ser documentada de forma clara, utilizando ferramentas padrão da indústria, como o Swagger. A documentação deve incluir os endpoints, métodos, parâmetros e exemplos de requisições. |
-| RNF02 | *Usabilidade* | A interface do usuário deve ser intuitiva e limpa, garantindo uma boa experiência de uso para todos os perfis (Membro de Equipe, Líder e Gerente). |
-| RNF03 | *Modelagem do Banco de Dados* | O sistema deverá contar com uma modelagem de banco de dados relacional otimizada, garantindo integridade referencial, desempenho nas consultas e escalabilidade. A modelagem deverá considerar normalização, chaves estrangeiras, índices e histórico de movimentações dos cards para o cálculo de indicadores como tempo de execução e retrabalho. |
+| **NH-RNF-001** | *Documentação Técnica* | A API desenvolvida para se conectar com o Jira deverá ser documentada de forma clara, utilizando ferramentas padrão da indústria, como o Swagger. A documentação deve incluir os endpoints, métodos, parâmetros e exemplos de requisições. |
+| **NH-RNF-002** | *Usabilidade* | A interface do usuário deve ser intuitiva e limpa, garantindo uma boa experiência de uso para todos os perfis (Membro de Equipe, Líder e Gerente). |
+| **NH-RNF-003** | *Modelagem do Banco de Dados* | O sistema deverá contar com uma modelagem de banco de dados relacional otimizada, garantindo integridade referencial, desempenho nas consultas e escalabilidade. A modelagem deverá considerar normalização, chaves estrangeiras, índices e histórico de movimentações dos cards para o cálculo de indicadores como tempo de execução e retrabalho. |
 
 </details>
 
-
-## :date: Backlog do Produto
+## :date: Backlog do Produto <a id="date-backlog-do-produto"></a>
 <details>
 
-<summary>Clique aqui</summary>
+<summary>Mostrar Backlog do Produto</summary>
+
+<br>
 
 | ID | Rank | Prioridade | User Story | Sprint | Requisitos Relacionados |
 |:---|:---|:---|:---|:---|:---|
-| US01 | 1 | Alta | Como Gerente de Projeto, desejo visualizar todas as métricas disponibilizadas em cards, para acompanhar de forma prática os dados e indicadores de desempenho do projeto. | 1 | RF04 |
-| US02 | 2 | Alta | Como Gerente de Projeto, desejo visualizar a quantidade de cards para que eu tenha uma visão estratégica do projeto. | 1 | RF03 |
-| US03 | 3 | Alta | Como Gerente de Projeto, desejo analisar os custos consolidados dos projetos, para controlar melhor os recursos e alinhar os investimentos com os objetivos estratégicos da empresa. | 1 | RF03 |
-| US04 | 4 | Alta | Como Gerente de Projeto, preciso ter visibilidade sobre o tempo gasto de ciclo das tarefas, para avaliar a eficiência das entregas e apoiar a tomada de decisões de melhoria no processo. | 1 | RF03 |
-| US05 | 5 | Média |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | 2 | RF02 |
-| US06 | 6 | Média | Como Gerente de Projeto, desejo filtrar os dados exibidos por projeto. | 2 | RF01 |
-| US07 | 7 | Média | Como Líder de Equipe, desejo visualizar a carga de trabalho do meu time (número de cards e horas por membro), para que eu possa acompanhar o desempenho da equipe. | 2 | RF02 |
-| US08 | 8 | Baixa | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | 3 | RF06 |
-| US09 | 9 | Baixa | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | 3 | RF05, RF07 |
-| US10 | 10 | Baixa | Como Gerente de Projeto, quero acompanhar a distribuição dos cards por status (em andamento, concluídos, pendentes etc.), a fim de monitorar o progresso e identificar possíveis gargalos no fluxo de trabalho. | 3 | RF06 |
+| **NH-US-001** | 1 | Alta | Como Gerente de Projeto, desejo visualizar todas as métricas disponibilizadas em cards, para acompanhar de forma prática os dados e indicadores de desempenho do projeto. | 1 | **NH-RF-004** |
+| **NH-US-002** | 2 | Alta | Como Gerente de Projeto, desejo visualizar a quantidade de cards para que eu tenha uma visão estratégica do projeto. | 1 | **NH-RF-003** |
+| **NH-US-003** | 3 | Alta | Como Gerente de Projeto, desejo analisar os custos consolidados dos projetos, para controlar melhor os recursos e alinhar os investimentos com os objetivos estratégicos da empresa. | 1 | **NH-RF-003** |
+| **NH-US-004** | 4 | Alta | Como Gerente de Projeto, preciso ter visibilidade sobre o tempo gasto de ciclo das tarefas, para avaliar a eficiência das entregas e apoiar a tomada de decisões de melhoria no processo. | 1 | **NH-RF-003** |
+| **NH-US-005** | 5 | Média |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | 2 | **NH-RF-002** |
+| **NH-US-006** | 6 | Média | Como Gerente de Projeto, desejo filtrar os dados exibidos por projeto. | 2 | **NH-RF-001** |
+| **NH-US-007** | 7 | Média | Como Líder de Equipe, desejo visualizar a carga de trabalho do meu time (número de cards e horas por membro), para que eu possa acompanhar o desempenho da equipe. | 2 | NH-RF-002 |
+| **NH-US-008** | 8 | Baixa | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | 3 | **NH-RF-006** |
+| **NH-US-009** | 9 | Baixa | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | 3 | **NH-RF-005**, **NH-RF-007** |
+| **NH-US-010** | 10 | Baixa | Como Gerente de Projeto, quero acompanhar a distribuição dos cards por status (em andamento, concluídos, pendentes etc.), a fim de monitorar o progresso e identificar possíveis gargalos no fluxo de trabalho. | 3 | **NH-RF-006** |
 
 </details>
 
-## :date: Sprint Backlog
-
+## :date: Sprint Backlog <a id="date-sprint-backlog"></a>
 <details>
-<summary>Sprint 1</summary>
 
-Proposta de entrega:
-Tela inicial (sem validação de acesso do usuário), contendo os seguintes gráficos consumindo dados do cliente:
-- Total de Issues
-- Análise de custo (geral e por projeto)
-- Quantidade de atividades realizadas dentro do período (dia, mês, ano)
-- Quantidade de horas utilizadas por desenvolvedor, detalhadas por atividade e por dias
+<summary>Mostrar Spring Backlog</summary>
+
+### Sprint 1
 
 | ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
 |:---|:---|:---|:---|:---|
-| US01 | 1 | Alta | Como Gerente de Projeto, desejo visualizar todas as métricas disponibilizadas em cards, para acompanhar de forma prática os dados e indicadores de desempenho do projeto. | RF04 |
-| US02 | 2 | Média | Como Gerente de Projeto, desejo visualizar a quantidade de cards para que eu tenha uma visão estratégica do projeto. | RF03 |
-| US03 | 3 | Média | Como Gerente de Projeto, desejo analisar os custos consolidados dos projetos, para controlar melhor os recursos e alinhar os investimentos com os objetivos estratégicos da empresa. | RF03 |
-| US04 | 4 | Média | Como Gerente de Projeto, preciso ter visibilidade sobre o tempo gasto de ciclo das tarefas, para avaliar a eficiência das entregas e apoiar a tomada de decisões de melhoria no processo. | RF03 |
+| **NH-US-001** | 1 | Alta | Como Gerente de Projeto, desejo visualizar todas as métricas disponibilizadas em cards, para acompanhar de forma prática os dados e indicadores de desempenho do projeto. | **NH-RF-004** |
+| **NH-US-002** | 2 | Média | Como Gerente de Projeto, desejo visualizar a quantidade de cards para que eu tenha uma visão estratégica do projeto. | **NH-RF-003** |
+| **NH-US-003** | 3 | Média | Como Gerente de Projeto, desejo analisar os custos consolidados dos projetos, para controlar melhor os recursos e alinhar os investimentos com os objetivos estratégicos da empresa. | **NH-RF-003** |
+| **NH-US-004** | 4 | Média | Como Gerente de Projeto, preciso ter visibilidade sobre o tempo gasto de ciclo das tarefas, para avaliar a eficiência das entregas e apoiar a tomada de decisões de melhoria no processo. | **NH-RF-003** |
 
-</details>
+### Sprint 2</summary>
 
-<details>
-<summary>Sprint 2</summary>
-
-<!-- | ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
+| ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
 |:---|:---|:---|:---|:---|
-| US05 | 5 | Alta |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | RF02 |
-| US06 | 6 | Alta | Como Gerente de Projeto, desejo filtrar os dados exibidos por projeto. | RF01 |
-| US07 | 7 | Alta | Como Líder de Equipe, desejo visualizar a carga de trabalho do meu time (número de cards e horas por membro), para que eu possa acompanhar o desempenho da equipe. | RF02 | -->
-</details>
+| **NH-US-005** | 5 | Alta |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | **NH-RF-002** |
+| **NH-US-006** | 6 | Alta | Como Gerente de Projeto, desejo filtrar os dados exibidos por projeto. | **NH-RF-001** |
+| **NH-US-007** | 7 | Alta | Como Líder de Equipe, desejo visualizar a carga de trabalho do meu time (número de cards e horas por membro), para que eu possa acompanhar o desempenho da equipe. | **NH-RF-002** |
 
-<details>
-<summary>Sprint 3</summary>
+### Sprint 3
 
-<!-- | ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
+| ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
 |:---|:---|:---|:---|:---|
-| US08 | 8 | Alta | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | RF06 |
-| US09 | 9 | Alta | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | RF05 |
-| US10 | 10 | Alta | Como Gerente de Projeto, quero acompanhar a distribuição dos cards por status (em andamento, concluídos, pendentes etc.), a fim de monitorar o progresso e identificar possíveis gargalos no fluxo de trabalho. | RF06 | -->
+| **NH-US-008** | 8 | Alta | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | **NH-RF-006** |
+| **NH-US-009** | 9 | Alta | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | **NH-RF-005** |
+| **NH-US-010** | 10 | Alta | Como Gerente de Projeto, quero acompanhar a distribuição dos cards por status (em andamento, concluídos, pendentes etc.), a fim de monitorar o progresso e identificar possíveis gargalos no fluxo de trabalho. | **NH-RF-006** |
+
 </details>
 
 <br>
@@ -122,8 +115,8 @@ Tela inicial (sem validação de acesso do usuário), contendo os seguintes grá
 | --- | -------------------------- | --------| ----- | --- |
 | --  | KickOff                    | 25/08   | 29/08 |  X  |
 |  1  | Sprint 1                   | 08/09   | 28/09 |  X  |
-|  2  | Sprint review / Planning   | 29/09   | 03/10 |     |
-|  3  | Sprint 2                   | 06/10   | 26/10 |     |
+|  2  | Sprint review / Planning   | 29/09   | 03/10 |  X  |
+|  3  | Sprint 2                   | 06/10   | 26/10 |  X  |
 |  4  | Sprint review / Planning   | 27/10   | 31/10 |     |
 |  5  | Sprint 3                   | 03/11   | 23/11 |     |
 |  6  | Sprint review              | 24/11   | 28/11 |     |

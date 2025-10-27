@@ -82,20 +82,23 @@ CREATE INDEX idx_fato_custo_hora_dev_periodo ON fato_custo_hora (dev_id, periodo
 
 
 CREATE TABLE fato_apontamento_horas (
-	apontamento_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-	periodo_id BIGINT NOT NULL,
-	data_atualizacao TIMESTAMP(6) WITHOUT TIME ZONE,
-	data_criacao TIMESTAMP WITHOUT TIME ZONE,
-	descricao_trabalho TEXT,
-	horas_trabalhadas DOUBLE PRECISION,
-	atividade_id BIGINT NOT NULL,
-	dev_id BIGINT NOT NULL,
-	projeto_id BIGINT NOT NULL,
-	CONSTRAINT fk_fato_apontamento_horas_periodo FOREIGN KEY (periodo_id) REFERENCES dim_periodo (periodo_id) ON DELETE RESTRICT,
-	CONSTRAINT fk_fato_apontamento_horas_atividade FOREIGN KEY (atividade_id) REFERENCES dim_atividade (atividade_id) ON DELETE RESTRICT,
-	CONSTRAINT fk_fato_apontamento_horas_dev FOREIGN KEY (dev_id) REFERENCES dim_dev (dev_id) ON DELETE RESTRICT,
-	CONSTRAINT fk_fato_apontamento_horas_projeto FOREIGN KEY (projeto_id) REFERENCES dim_projeto (projeto_id) ON DELETE RESTRICT
+    apontamento_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    periodo_id BIGINT NOT NULL,
+    data_atualizacao TIMESTAMP(6) WITHOUT TIME ZONE,
+    data_criacao TIMESTAMP WITHOUT TIME ZONE,
+    descricao_trabalho TEXT,
+    horas_trabalhadas DOUBLE PRECISION,
+    atividade_id BIGINT NOT NULL,
+    dev_id BIGINT NOT NULL,
+    projeto_id BIGINT NOT NULL,
+    tipo_id BIGINT NOT NULL,
+    CONSTRAINT fk_fato_apontamento_horas_periodo FOREIGN KEY (periodo_id) REFERENCES dim_periodo (periodo_id) ON DELETE RESTRICT,
+    CONSTRAINT fk_fato_apontamento_horas_atividade FOREIGN KEY (atividade_id) REFERENCES dim_atividade (atividade_id) ON DELETE RESTRICT,
+    CONSTRAINT fk_fato_apontamento_horas_dev FOREIGN KEY (dev_id) REFERENCES dim_dev (dev_id) ON DELETE RESTRICT,
+    CONSTRAINT fk_fato_apontamento_horas_projeto FOREIGN KEY (projeto_id) REFERENCES dim_projeto (projeto_id) ON DELETE RESTRICT,
+    CONSTRAINT fk_fato_apontamento_horas_tipo FOREIGN KEY (tipo_id) REFERENCES dim_tipo (tipo_id) ON DELETE RESTRICT
 );
 
 CREATE INDEX idx_apontamento_dev_periodo ON fato_apontamento_horas (dev_id, periodo_id);
 CREATE INDEX idx_apontamento_projeto_periodo ON fato_apontamento_horas (projeto_id, periodo_id);
+CREATE INDEX idx_apontamento_tipo_periodo ON fato_apontamento_horas (tipo_id, periodo_id);

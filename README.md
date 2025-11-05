@@ -161,4 +161,4 @@ Proposta de entrega:
 
 ## Tecnologias Utilizadas
 
-<img src="docs/images/ferramentas.png" alt="API 5 SEMESTRE">
+<img src="images/ferramentas.png" alt="API 5 SEMESTRE">

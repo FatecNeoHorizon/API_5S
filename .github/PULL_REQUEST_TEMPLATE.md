@@ -1,6 +1,6 @@
 ## Link para documento de requisito 
 
-- Documento de requisitos: https://raw.githubusercontent.com/FatecNeoHorizon/API_5S/main/docs/Requisitos/Requisitos.md
+- [Documento de requisitos](https://github.com/FatecNeoHorizon/API_5S/blob/main/docs/Requisitos/Requisitos.md)
 
  ### IDs dos requisitos cobertos nesta PR: 
  | Seleção | Id | Descrição |

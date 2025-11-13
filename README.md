@@ -41,7 +41,7 @@ O objetivo da solução é transformar dados brutos em informações estratégic
 | RF04 | *Relatório de Atividades por Período* | O sistema deverá apresentar um relatório consolidado que exibe a quantidade de cards criados, movidos ou concluídos em períodos pré-definidos (dia, semana, mês ou ano). A visualização deverá permitir a quebra das atividades por desenvolvedor e por projeto. |
 | RF05 | *Identificação de Bugs e Retrabalhos* | O sistema deverá identificar e contabilizar a quantidade de cards do tipo "bug". Um relatório com o total de bugs por projeto e por desenvolvedor deverá ser visível para gestores. |
 | RF06 | *Sistema de Controle de Acesso* | O sistema deverá implementar três níveis de permissão (Membro de Equipe, Líder de Equipe e Gerente de Projeto) que limitam a visualização dos dados. As permissões deverão ser aplicadas em todos os painéis e relatórios, garantindo que cada usuário visualize apenas as informações pertinentes às suas responsabilidades e aos projetos que ele gerencia. |
-| RF07 | Relatório de Horas por Módulo | O sistema deverá disponibilizar um relatório que apresente a quantidade de horas registradas nos módulos Épico, Produto e Entregável. O objetivo é permitir que o usuário tenha acesso a essas informações de forma clara e organizada, apoiando a análise de esforço e acompanhamento do progresso dos projetos. |
+| RF07 | *Relatório de Horas por Módulo* | O sistema deverá disponibilizar um relatório que apresente a quantidade de horas registradas nos módulos Épico, Produto e Entregável. O objetivo é permitir que o usuário tenha acesso a essas informações de forma clara e organizada, apoiando a análise de esforço e acompanhamento do progresso dos projetos. |
 
 ### Requisitos Não Funcionais
 
@@ -64,15 +64,13 @@ O objetivo da solução é transformar dados brutos em informações estratégic
 | US01 | 1 | Alta | Como Gerente de Projeto, desejo visualizar todas as métricas disponibilizadas em cards, para acompanhar de forma prática os dados e indicadores de desempenho do projeto. | 1 | RF04 |
 | US02 | 2 | Alta | Como Gerente de Projeto, desejo visualizar a quantidade de cards para que eu tenha uma visão estratégica do projeto. | 1 | RF02 |
 | US03 | 3 | Alta | Como Gerente de Projeto, desejo analisar os custos consolidados dos projetos, para controlar melhor os recursos e alinhar os investimentos com os objetivos estratégicos da empresa. | 1 | RF03 |
-| US04 | 4 | Alta | Como Gerente de Projeto, preciso ter visibilidade sobre o tempo gasto de ciclo das tarefas, para avaliar a eficiência das entregas e apoiar a tomada de decisões de melhoria no processo. | 1 | RF04 |
+| US04 | 4 | Alta | Como Gerente de Projeto, preciso ter visibilidade sobre o tempo gasto de ciclo das tarefas, para avaliar a eficiência das entregas e apoiar a tomada de decisões de melhoria no processo. | 1 | RF07 |
 | US05 | 5 | Média |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | 2 | RF02 |
 | US06 | 6 | Média | Como Gerente de Projeto, desejo metrificar a quantidade de atividades relacionadas à correção de bugs para gerenciar qualidade e reduzir retrabalhos. | 2 | RF05 |
 | US07 | 7 | Média | Como Gerente de Projeto, desejo informar de forma dinâmica o custo por hora dos desenvolvedores para analisar assertivamente métricas orçamentárias. | 2 | RF03 |
 | US08 | 8 | Média | Como Gerente de Projeto, desejo realizar filtros dos dados exibidos por projeto para construir vistas dinâmicas. | 2 | RF01 |
-| US10 | 9 | Baixa | Como Líder de Equipe, desejo visualizar a carga de trabalho do meu time (número de cards e horas por membro), para que eu possa acompanhar o desempenho da equipe. | 3 | RF02 |
-| US09 | 10 | Baixa | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | 3 | RF06 |
-| US11 | 11 | Baixa | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | 3 | RF05, RF07 |
-| US12 | 12 | Baixa | Como Gerente de Projeto, quero acompanhar a distribuição dos cards por status (em andamento, concluídos, pendentes etc.), a fim de monitorar o progresso e identificar possíveis gargalos no fluxo de trabalho. | 3 | RF06 |
+| US09 | 9 | Baixa |Como usuário, desejo que os dados dos meus dashboard recebam atualizações periódicas. | 3 | RF02 |
+| US10 | 10 | Baixa | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | 3 | RF06 |
 
 </details>
 
@@ -93,7 +91,7 @@ Tela inicial (sem validação de acesso do usuário), contendo os seguintes grá
 | US01 | 1 | Alta | Como Gerente de Projeto, desejo visualizar todas as métricas disponibilizadas em cards, para acompanhar de forma prática os dados e indicadores de desempenho do projeto. | RF04 |
 | US02 | 2 | Média | Como Gerente de Projeto, desejo visualizar a quantidade de cards para que eu tenha uma visão estratégica do projeto. | RF02 |
 | US03 | 3 | Média | Como Gerente de Projeto, desejo analisar os custos consolidados dos projetos, para controlar melhor os recursos e alinhar os investimentos com os objetivos estratégicos da empresa. | RF03 |
-| US04 | 4 | Média | Como Gerente de Projeto, preciso ter visibilidade sobre o tempo gasto de ciclo das tarefas, para avaliar a eficiência das entregas e apoiar a tomada de decisões de melhoria no processo. | RF04 |
+| US04 | 4 | Média | Como Gerente de Projeto, preciso ter visibilidade sobre o tempo gasto de ciclo das tarefas, para avaliar a eficiência das entregas e apoiar a tomada de decisões de melhoria no processo. | RF07 |
 
 </details>
 
@@ -109,19 +107,19 @@ Proposta de entrega:
 |:---|:---|:---|:---|:---|
 | TT02 | 1 | Alta | Refatorar modelo de banco alinhado ao ETL e cadastro de valor hora dev e documentação de processos de DevOps | RF04 |
 | US05 | 2 | Alta |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | RF02 |
-| US06 | 3 | Média | Como Gerente de Projeto, desejo metrificar a quantidade de atividades relacionadas à correção de bugs para gerenciar qualidade e reduzir retrabalhos. | RF01 |
-| US07 | 4 | Média | Como Gerente de Projeto, desejo informar de forma dinâmica o custo por hora dos desenvolvedores para analisar assertivamente métricas orçamentárias. | RF01 |
+| US06 | 3 | Média | Como Gerente de Projeto, desejo metrificar a quantidade de atividades relacionadas à correção de bugs para gerenciar qualidade e reduzir retrabalhos. | RF05 |
+| US07 | 4 | Média | Como Gerente de Projeto, desejo informar de forma dinâmica o custo por hora dos desenvolvedores para analisar assertivamente métricas orçamentárias. | RF03 |
 | US08 | 5 | Baixa | Como Gerente de Projeto, desejo realizar filtros dos dados exibidos por projeto para construir vistas dinâmicas. | RF01 |
 </details>
 
 <details>
 <summary>Sprint 3</summary>
 
-<!-- | ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
+| ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
 |:---|:---|:---|:---|:---|
-| US08 | 8 | Alta | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | RF06 |
-| US09 | 9 | Alta | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | RF05 |
-| US10 | 10 | Alta | Como Gerente de Projeto, quero acompanhar a distribuição dos cards por status (em andamento, concluídos, pendentes etc.), a fim de monitorar o progresso e identificar possíveis gargalos no fluxo de trabalho. | RF06 | -->
+| TT03 | 1 | Alta | Documentação de processos de DevOps | RF04 |
+| US09 | 1 | Média  | Como usuário, desejo que os dados dos meus dashboard recebam atualizações periódicas. | RF01 |
+| US10 | 3 | Baixa | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | RF06 |
 </details>
 
 <br>
@@ -137,7 +135,7 @@ Proposta de entrega:
 |  1  | Sprint 1                   | 08/09   | 28/09 |  X  |
 |  2  | Sprint review / Planning   | 29/09   | 03/10 |  X  |
 |  3  | Sprint 2                   | 06/10   | 26/10 |  X  |
-|  4  | Sprint review / Planning   | 27/10   | 31/10 |     |
+|  4  | Sprint review / Planning   | 27/10   | 31/10 |  X  |
 |  5  | Sprint 3                   | 03/11   | 23/11 |     |
 |  6  | Sprint review              | 24/11   | 28/11 |     |
 |  7  | Feira de Soluções          | 04/12   |       |     |

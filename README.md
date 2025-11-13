@@ -67,12 +67,12 @@ O objetivo da solução é transformar dados brutos em informações estratégic
 | `NH-US02-001` | 2 | Alta | Como Gerente de Projeto, desejo visualizar a quantidade de cards para que eu tenha uma visão estratégica do projeto. | 1 | **NH-RF-003** |
 | `NH-US-003` | 3 | Alta | Como Gerente de Projeto, desejo analisar os custos consolidados dos projetos, para controlar melhor os recursos e alinhar os investimentos com os objetivos estratégicos da empresa. | 1 | **NH-RF-003** |
 | `NH-US-004` | 4 | Alta | Como Gerente de Projeto, preciso ter visibilidade sobre o tempo gasto de ciclo das tarefas, para avaliar a eficiência das entregas e apoiar a tomada de decisões de melhoria no processo. | 1 | **NH-RF-003** |
-| `NH-US-005` | 5 | Média |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | 2 | **NH-RF-002** |
-| `NH-US-006` | 6 | Média | Como Gerente de Projeto, desejo filtrar os dados exibidos por projeto. | 2 | **NH-RF-001** |
-| `NH-US-007` | 7 | Média | Como Líder de Equipe, desejo visualizar a carga de trabalho do meu time (número de cards e horas por membro), para que eu possa acompanhar o desempenho da equipe. | 2 | **NH-RF-002** |
-| `NH-US-008` | 8 | Baixa | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | 3 | **NH-RF-006** |
-| `NH-US-009` | 9 | Baixa | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | 3 | **NH-RF-005**, **NH-RF-007** |
-| `NH-US-010` | 10 | Baixa | Como Gerente de Projeto, quero acompanhar a distribuição dos cards por status (em andamento, concluídos, pendentes etc.), a fim de monitorar o progresso e identificar possíveis gargalos no fluxo de trabalho. | 3 | **NH-RF-006** |
+| `NH-US-005` | 5 | Média | Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | 2 | **NH-RF-002** |
+| `NH-US-006` | 6 | Média | Como Gerente de Projeto, desejo metrificar a quantidade de atividades relacionadas à correção de bugs para gerenciar qualidade e reduzir retrabalhos. | 2 | **NH-RF-001** |
+| `NH-US-007` | 7 | Média | Como Gerente de Projeto, desejo informar de forma dinâmica o custo por hora dos desenvolvedores para analisar assertivamente métricas orçamentárias. | 2 | **NH-RF-002** |
+| `NH-US-008` | 8 | Baixa |  Como Gerente de Projeto, desejo realizar filtros dos dados exibidos por projeto para construir vistas dinâmicas. | 3 | **NH-RF-006** |
+| `NH-US-009` | 9 | Baixa | Como usuário, desejo que os dados dos meus dashboard recebam atualizações periódicas. | 3 | **NH-RF-005**, **NH-RF-007** |
+| `NH-US-010` | 10 | Baixa | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | 3 | **NH-RF-006** |
 
 </details>
 
@@ -94,17 +94,21 @@ O objetivo da solução é transformar dados brutos em informações estratégic
 
 | ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
 |:---|:---|:---|:---|:---|
+| **TT02** | 1 | Alta | Refatorar modelo de banco alinhado ao ETL e cadastro de valor hora dev e documentação de processos de DevOps | **NH-RF-004** / **NH-RNF-003** |
 | **NH-US-005** | 5 | Alta |Como Gerente de Projeto, desejo visualizar a quantidade de horas utilizadas por cada desenvolvedor, detalhadas por atividade e por dia, para acompanhar a distribuição do esforço da equipe e identificar oportunidades de otimização na alocação de recursos. | **NH-RF-002** |
-| **NH-US-006** | 6 | Alta | Como Gerente de Projeto, desejo filtrar os dados exibidos por projeto. | **NH-RF-001** |
-| **NH-US-007** | 7 | Alta | Como Líder de Equipe, desejo visualizar a carga de trabalho do meu time (número de cards e horas por membro), para que eu possa acompanhar o desempenho da equipe. | **NH-RF-002** |
+| **NH-US-006** | 6 | Alta | Como Gerente de Projeto, desejo metrificar a quantidade de atividades relacionadas à correção de bugs para gerenciar qualidade e reduzir retrabalhos | **NH-RF-001** |
+| **NH-US-007** | 7 | Alta | Como Gerente de Projeto, desejo informar de forma dinâmica o custo por hora dos desenvolvedores para analisar assertivamente métricas orçamentárias. | **NH-RF-003** |
+| **NH-US-008** | 5 | Baixa | Como Gerente de Projeto, desejo realizar filtros dos dados exibidos por projeto para construir vistas dinâmicas. | **NH-RF-001** |
+
+
 
 ### Sprint 3
 
 | ID | Rank | Prioridade na Sprint | User Story | Requisitos Relacionados |
 |:---|:---|:---|:---|:---|
-| **NH-US-008** | 8 | Alta | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | **NH-RF-006** |
-| **NH-US-009** | 9 | Alta | Como usuário, quero acessar um relatório com as métricas dos cards do tipo bug, permitindo identificar e acompanhar os retrabalhos nos projetos. | **NH-RF-005** |
-| **NH-US-010** | 10 | Alta | Como Gerente de Projeto, quero acompanhar a distribuição dos cards por status (em andamento, concluídos, pendentes etc.), a fim de monitorar o progresso e identificar possíveis gargalos no fluxo de trabalho. | **NH-RF-006** |
+| **TT03** | 1 | Alta | Documentação de processos de DevOps | RF04 |
+| **NH-US-009** | 9 | Alta | Como usuário, desejo que os dados dos meus dashboard recebam atualizações periódicas. | **NH-RF-001** |
+| **NH-US-010** | 10 | Alta | Como usuário, desejo realizar autenticação com meu usuário e senha, para garantir segurança aos dados sensíveis. | **NH-RF-006** |
 
 </details>
 

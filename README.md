@@ -27,6 +27,9 @@ Desenvolver uma aplicação web de inteligência de negócios para gestão de pr
 O objetivo da solução é transformar dados brutos em informações estratégicas, capacitando os usuários na tomada de decisões de forma ágil e assertiva.
 
 
+
+
+
 ## Requisitos Funcionais e Não Funcionais<a id="requisitos-funcionais-e-nao-funcionais"></a>
 <details>
 

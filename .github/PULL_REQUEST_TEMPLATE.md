@@ -1,6 +1,6 @@
 ## Link para documento de requisito 
 
-- [Documento de requisitos](https://github.com/FatecNeoHorizon/API_5S/blob/main/docs/Requisitos/Requisitos.md)
+- [Documento de requisitos](https://github.com/FatecNeoHorizon/API_5S/wiki/Processo-%E2%80%90-Requirement-Tracking)
 
  ### IDs dos requisitos cobertos nesta PR: 
  | Seleção | Id | Descrição |
